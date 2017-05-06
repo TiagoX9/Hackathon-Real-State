@@ -1,0 +1,70 @@
+.h1color {
+
+  color:   rgb(139, 139, 136);
+  margin-left: 227px;
+}
+
+
+
+.thead-color {
+
+    background-color: #888479;
+    color: white;
+    font-size: 65%;
+}
+
+.thead-color tr{
+ height: 5px;
+}
+.thead-color th{
+
+}
+
+
+
+
+.table-image {
+
+    background-image: url("1.jpg");
+    background-size: 100%;
+  
+    
+}
+.thead1 {
+
+    background-color: rgba(254, 251, 246, 0.9);
+    color: rgb(139, 139, 136);
+    
+  
+    
+}
+
+.thead2 {
+
+    background-color: rgba(253, 249, 238, 0.5);
+    color: rgb(139, 139, 136);
+    
+} 
+.thead3 {
+
+    background-color: rgba(254, 251, 246, 0.9);
+    color: rgb(139, 139, 136)
+}
+.thead4 {
+    background-color: rgba(253, 249, 238, 0.7);
+   color: rgb(139, 139, 136);
+}
+.table45 {
+
+    
+    border-bottom: solid black 0 300px;
+    
+  
+}
+
+td a{
+    color: rgba(139, 139, 136);
+
+}
+
+ 

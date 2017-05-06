@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <div class="container-fluid header">
+        <div class="row">
+            <div class="col-md-12">
+                <img class="img img-responsive logo" src="hackathonmaterials/logo.png">
+                <span class="navbar">
+                    <a href="#oprojektu"><h2>O projektu</h2></a>
+                     <a href="#Lokalita"><h2>Lokalita</h2></a>
+                     <a href="#Přehledbytůacen"><h2>Přehled bytů a cen</h2></a>
+                     <a href="#Galerie"><h2>Galerie</h2></a>
+                     <a href="#Kontakt"><h2>Kontakt</h2></a>
+                </span>
+                <div class="row">
+                    <div class="col-md-6 logo">
+                        <!-- INSERT THIS <img src="hackathonmaterials/logo.png"> -->
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 dice">
+                            <img class="img img-responsive"src="hackathonmaterials/dice.png"> 
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                </div>
+                <h1 class="headertitlebottom">K nastěhování xx / 2018</h1>
+            </div>
+        </div>
+        
+    </div>
+    <!-- DESCRIPTION -->
+    <div id="oprojektu" class="container-fluid description">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="descriptiontitle"> Brožura ke stažení</h1>
+                <img class="img img-responsive houses" src="hackathonmaterials/house1.png">
+            </div>
+            <div class="col-md-6 descriptiontext">
+                <h1> O projektu </h1>
+                <p>Vysoce kvalitní bydlení citlivě zasazené do staré zástavby. Rezidence Želanského je 4-patrový dům s 9 byty
+                    a 1 ateliérem o velikosti v rozmezí 1KK (34.1 m2) až mezonetové 4KK (150,1 m2).<br>
+                    <br>
+                     Byt je možné zakoupits balkonem, terasou, předzahrádkou či podkrovní galerií. Rezidence Želanského nabízí kryté i venkovní
+                    parkování, sklepy, kočárkárnu či sušárnu.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img img-responsive houses"src="hackathonmaterials/house1.png">
+            </div>
+            <div class="col-md-6 descriptiontext1">
+                <h1>Dispozice domu</h1>
+                <p>Rezidence Želanského má charakter rodinného klidného bydlení. Dům je rozdělen na přízemí a 4 nadzemní podlaží
+                    a skýtá 9 bytů a 1 ateliér.<br>
+                    <br>
+                    <span class="titles">Přízemí</span> navíc nabízi parkovací garáže pro 2 a 3 vozy či venkovní krytá parkování
+                    pro 4 vozy, dále 9 sklepů, kočárkárnu a sušárnu.<br>
+                    <br> 
+                    <span class="titles">První podlaží</span> nabízí 3 byty o dispozici 1KK s prostornou
+                    předzahrádkou a terasou.<br>
+                    <br>
+                    <span class="titles">Druhé podlaží</span> nabízí 4 byty o dispozici 1KK s jedním balkonem či 3KK se dvěma
+                    balkony.<br>
+                    <br> 
+                    <span class="titles">Třetí a čtvrté</span> nadzemní podlaží obsahuje 2 nadstandardní mezonetové byty o dispozic 4KK s podkrovní
+                    galerií a balkony </p>
+            </div>
+        </div>
+<!-- LOCATION -->
+        <div id="Lokalita" class="container-fluid location">
+            <div class="row">
+                <div class="col-md-6 lokalita">
+                    <h1> Lokalita </h1>
+                    <p>Rezidence Želanského se nachází v klidné vilové čtvrti v pražské části Praha 6 s výbornou dopravní dostupností
+                        jak do centra města, tak na letiště Václava Havla. Přímo před domem se nachází zastávka autobusu,
+                        v docházkové vzdálenosti od rezidence jsou široké možnosti nákupů s několika obchodními domy. Občanská
+                        vybavenost okolí (školky, pošta, nemocnice atd.) je nadstandardní.</p>
+                        <img class="img img-responsive graphics" src="hackathonmaterials/graphics.png">
+                </div>
+                <div class="col-md-6">
+   <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 50.0715845, lng: 14.3000891};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4ftjDwtq8oXSLuUDzezFOGCC7QumQOXg&callback=initMap">
+    </script>
+        </div>
+        </div>
+    </div>
+    <!-- TABLE -->
+    <h1 id="Přehledbytůacen" class="h1color">PŘEHLED BITŮ A CENI</h1>
+<br>
+<br>
+<div class="table-image">
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+<table class="table45 table table-responsive">
+
+<thead class="thead-color">
+    
+    <tr>
+      <th>PODLAŽI</th>
+      <th>ČISLO BYTU</th>
+      <th>POČET</th>
+      <th>BYT m2</th>
+      <th>BALKON 1 m2</th>
+      <th>BALKON 2 m2</th>
+      <th>TERASA</th>
+      <th>PŘEDZAHRÁDKA</th>
+      <th>GALERIE
+          PODKROVI m2</th>
+      <th>GALERIE 
+          BALKON m2</th>
+          <th>ROZLOHA 
+              CELKEM m2</th>
+     <th>CENA</th>
+      <th>KE STAŽENÍ</th>
+    </tr>
+    
+  </thead>
+  
+  <tbody>
+     
+    <tr class="thead1">
+       
+
+      <th scope="row">PŘÍZEMÍ</th>
+  
+      <td>Venkovní kratké parkováni</td>
+      <td>4</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a href="PDF/PDF - Venkovni.pdf " download>PDF</td>
+    </tr>
+    <tr class="thead1">
+      <th scope="row"></th>
+      <td>Gáraž</td>
+      <td>3</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a href="PDF/PDF - GaraÌzÌ.pdf" download>PDF</td>
+    </tr>
+     <tr class="thead1">
+      <th scope="row"></th>
+      <td>Gáraž</td>
+      <td>2</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a href="PDF/PDF - GaraÌzÌ 2.pdf" download>PDF</td>
+    </tr>
+     <tr class="thead1">
+      <th scope="row"></th>
+      <td>Sklep</td>
+      <td>9</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><a href="PDF/PDF - Sklep.pdf" download>PDF</td>
+    </tr>
+
+    
+    <tr class="thead2">
+      <th scope="row">1. NP</th>
+      <td>Byt 101 (1KK)</td>
+      <td></td>
+      <td>49.7</td>
+      <td></td>
+      <td></td>
+      <td>16.7</td>
+      <td>100</td>
+      <td></td>
+      <td></td>
+      <td>166.4</td>
+      <td></td>
+      <td><a href="PDF/PDF - Byt 101.pdf" download>PDF</td>
+    </tr>
+     <tr class="thead2">
+      <th scope="row"></th>
+      <td>Byt 102 (1KK)</td>
+      <td></td>
+      <td>49.7</td>
+      <td></td>
+      <td></td>
+      <td>16.7</td>
+      <td>72.5</td>
+      <td></td>
+      <td></td>
+      <td>138.9</td>
+      <td></td>
+      <td><a href="PDF/PDF - Byt 102.pdf" download>PDF</td>
+    </tr>
+     <tr class="thead2">
+      <th scope="row"></th>
+      <td>Byt 103 (1KK)</td>
+      <td></td>
+      <td>47.5</td>
+      <td></td>
+      <td></td>
+      <td>28.9</td>
+      <td>12.9</td>
+      <td></td>
+      <td></td>
+      <td>89.3</td>
+      <td></td>
+      <td><a href="PDF/PDF - Byt 103.pdf" download>PDF</td>
+    </tr>
+     <tr class="thead2">
+      <th scope="row"></th>
+      <td>Byt 104 (1KK)</td>
+      <td></td>
+      <td>47.5</td>
+      <td></td>
+      <td></td>
+      <td>28.9</td>
+      <td>33</td>
+      <td></td>
+      <td></td>
+      <td>109.4</td>
+      <td></td>
+      <td><a href="PDF/PDF - Byt 104.pdf" download>PDF</td>
+    </tr>
+   <tr class="thead3">
+      <th scope="row">2. NP</th>
+      <td>Byt 201 (1KK)</td>
+      <td></td>
+      <td>80.8</td>
+      <td>2.8</td>
+      <td>3.8</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>87.4</td>
+      <td></td>
+      <td><a href="PDF/PDF - Byt 201.pdf" download>PDF</td>
+    </tr>
+    <tr class="thead3">
+      <th scope="row"></th>
+      <td>Byt 202 (1KK)</td>
+      <td></td>
+      <td>80.8</td>
+      <td>2.8</td>
+      <td>3.8</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>87.4</td>
+      <td></td>
+      <td><a href="PDF/PDF - Byt 202.pdf" download>PDF</td>
+    </tr>
+      <tr class="thead3">
+      <th scope="row"></th>
+      <td>Byt 203 (1KK)</td>
+      <td></td>
+      <td>31.2</td>
+      <td>2.9</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>34.1</td>
+      <td></td>
+      <td><a href="PDF/PDF - Byt 203.pdf" download>PDF</td>
+    </tr>
+    <tr class="thead3">
+      <th scope="row"></th>
+      <td>Byt 204 (1KK)</td>
+      <td></td>
+      <td>31.2</td>
+      <td>2.9</td>
+      <td>3.8</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>34.1</td>
+      <td></td>
+      <td><a href="PDF/PDF - Byt 204.pdf" download>PDF</td>
+    </tr>
+    <tr class="thead4">
+        
+      <th scope="row">3+4 NP</th>
+      <td colspan="2">Byt 301 (1KK)</td>
+     <td>97</td>
+      <td>7.6</td>
+      <td>7.2</td>
+      <td></td>
+      <td></td>
+      <td>32.9</td>
+      <td>5.4</td>
+      <td>150.1</td>
+      <td></td>
+      <td><a href="PDF/PDF - Byt 301.pdf" download>PDF</td>
+    </tr>
+     <tr class="thead4">
+        
+      <th scope="row">3+4 NP</th>
+      <td colspan="2">Byt 302 (1KK)</td>
+     <td>97</td>
+      <td>7.6</td>
+      <td>7.2</td>
+      <td></td>
+      <td></td>
+      <td>32.9</td>
+      <td>5.4</td>
+      <td>50.1</td>
+      <td></td>
+      <td><a href="PDF/PDF - Byt 302.pdf" download>PDF</td>
+    </tr>
+  </tbody>
+
+</table>
+        </div>
+        </div>
+    </div>
+</div>
+<!-- GALLERY -->
+<section class="gallery">
+    <div class="container">
+        <div class="row">
+            <h3 id="Galerie">GALERIE</h3>
+            <div class="col-lg-12 slide-show">
+                <div id="Carousel" class="carousel slide home-carousel">
+
+                    <ol class="carousel-indicators home-carousel-indicators">
+                        <li data-target="#Carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#Carousel" data-slide-to="1"></li>
+                        <li data-target="#Carousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+
+                        <div class="item active">
+                            <div class="row">
+
+                                <div class="col-md-3">
+                                    <a href=""><img
+                                            src="hackathonmaterials/1.jpg" alt="Image"></a>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a href=""><img
+                                            src="hackathonmaterials/2.jpg" alt="Image"></a>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a href=""><img
+                                            src="hackathonmaterials/3.jpg" alt="Image"></a>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a href=""><img
+                                            src="hackathonmaterials/4.jpg" alt="Image"></a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="row">
+
+                                <div class="col-md-3">
+                                    <a href=""><img
+                                            src="hackathonmaterials/1.jpg" alt="Image"></a>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a href=""><img
+                                            src="hackathonmaterials/2.jpg" alt="Image"></a>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a href=""><img
+                                            src="hackathonmaterials/3.jpg" alt="Image"></a>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a href=""><img
+                                            src="hackathonmaterials/4.jpg" alt="Image"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="row">
+
+                                <div class="col-md-3">
+                                    <a href=""><img
+                                            src="hackathonmaterials/1.jpg" alt="Image"></a>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a href=""><img
+                                            src="hackathonmaterials/2.jpg" alt="Image"></a>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a href=""><img
+                                            src="hackathonmaterials/3.jpg" alt="Image"></a>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <a href=""><img
+                                            src="hackathonmaterials/4.jpg" alt="Image"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a data-slide="prev" href="#Carousel"
+                       class="left carousel-control home-carousel-control">‹</a>
+                    <a data-slide="next" href="#Carousel"
+                       class="right carousel-control home-carousel-control">›</a>
+                </div>
+
+            </div>
+
+        </div>
+
+</section>
+<!-- Contact -->
+<section class="contact">
+    <div class="container">
+        <div class="row">
+            <div class="form-company">
+                <h3 id="Kontakt">KONTAKTUJTE NÁS</h3>
+                <div class="contact-form col-md-4 col-sm-12">
+                    <form action="" method="post" class="form-horizontal">
+                        <div class="form-group">
+                            <input class="form-control home-contact-form" type="text" name="name" placeholder="name">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control home-contact-form" type="text" name="surname"
+                                   placeholder="surname">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control home-contact-form" type="text" name="phone-number"
+                                   placeholder="phone number">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control home-contact-form" type="text" name="email" placeholder="e-mail">
+                        </div>
+                        <div class="form-group">
+                        <textarea class="form-control home-contact-form" name="your-message"
+                                  placeholder="your message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Contact">
+                        </div>
+                    </form>
+                </div>
+
+                <div class="residence-info col-md-7 col-sm-12 text-center">
+                    <div>
+                        <img class="" src="hackathonmaterials/logo.png" alt="logo">
+                    </div>
+                    <div class="company-list">
+                        <div>INVESTOR: <strong>Color Cube s.r.o</strong></div>
+                        <div>INVESTOR: <strong>Color Cube s.r.o</strong></div>
+                        <div>INVESTOR: <strong>Color Cube s.r.o</strong></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $('a[href^="#"]').on('click', function (event) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top
+            }, 1000);
+        }
+    });
+    </script>
+
+        
+</body>
+
+</html>

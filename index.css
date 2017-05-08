@@ -238,7 +238,7 @@ h1{
 
     background-color: #888479;
     color: white;
-    font-size: 65%;
+    font-size: 10px;
 }
 
 .thead-color tr{
@@ -289,7 +289,9 @@ td a{
     color: rgba(139, 139, 136);
 
 }
-
+.table th, .table td1 {
+    border-top: none !important;
+}
 /*Galerie*/
 /*font*/
 /*font-family: 'Raleway', sans-serif;*/

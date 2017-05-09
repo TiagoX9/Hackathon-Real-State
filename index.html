@@ -486,14 +486,17 @@
 </section>
 <!-- Contact -->
 <section id="Kontakt">
+    <div class="contact-cube">
+        <img src="img/cube2.png">
+    </div>
     <div class="container">
         <div class="row">
             <div class="form-company">
                 <h3>KONTAKTUJTE NÁS</h3>
                 <div class="contact-form col-md-4 col-sm-12">
-                    <form action="" method="post" class="form-horizontal">
+                    <form action="mailer/mail.php" method="post" class="form-horizontal">
                         <div class="form-group">
-                            <input class="form-control home-contact-form" type="text" name="name" placeholder="name">
+                            <input class="form-control home-contact-form" type="text" name="firstname" placeholder="name">
                         </div>
                         <div class="form-group">
                             <input class="form-control home-contact-form" type="text" name="surname"
@@ -511,7 +514,7 @@
                                   placeholder="your message"></textarea>
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="Contact">
+                            <input class="contact-button" type="submit" value="Contact">
                         </div>
                     </form>
                 </div>

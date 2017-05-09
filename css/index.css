@@ -424,8 +424,12 @@ td a{
 }
 
 
-.Kontakt{
+#Kontakt{
     background-color: rgba(211,212,185,0.8);
+}
+
+.contact-cube{
+    float: right;
 }
 
 .form-company{
@@ -435,7 +439,7 @@ td a{
     font-family: 'Lora', serif;
     color:rgb(137,134,124);
 }
-.home-contact-form{
+#home-contact-form{
     border-radius: 2px;
 }
 

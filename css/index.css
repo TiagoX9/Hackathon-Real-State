@@ -296,7 +296,7 @@ td a{
 /*font*/
 /*font-family: 'Raleway', sans-serif;*/
 /*font-family: 'Lora', serif;*/
-.gallery{
+#Galerie{
     background-color: rgb(157,154,144);
     height: 400px;
     display: flex;
@@ -306,7 +306,7 @@ td a{
 .slide-show{
     margin-top: 20px;
 }
-.gallery h3{
+#Galerie h3{
     font-family: 'Lora', serif;
     color:rgb(255,255,255);
 }
@@ -424,14 +424,14 @@ td a{
 }
 
 
-.contact{
+.Kontakt{
     background-color: rgba(211,212,185,0.8);
 }
 
 .form-company{
     margin-top: 80px;
 }
-.contact h3{
+.Kontakt h3{
     font-family: 'Lora', serif;
     color:rgb(137,134,124);
 }

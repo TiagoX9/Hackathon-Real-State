@@ -315,19 +315,28 @@ td a{
     padding: 0 40px 30px 40px;
 }
 .home-carousel img{
-    width: 250px;
-    height: 170px;
+    /*width: 250px;*/
+    /*height: 170px;*/
+    /*-webkit-box-shadow: 5px 8px 6px 0px rgba(50, 50, 50, 0.75);*/
+    /*-moz-box-shadow:    5px 8px 6px 0px rgba(50, 50, 50, 0.75);*/
+    /*box-shadow:         5px 8px 6px 0px rgba(50, 50, 50, 0.75);*/
+    width: 100%;
+}
+.slide-img{
     -webkit-box-shadow: 5px 8px 6px 0px rgba(50, 50, 50, 0.75);
     -moz-box-shadow:    5px 8px 6px 0px rgba(50, 50, 50, 0.75);
     box-shadow:         5px 8px 6px 0px rgba(50, 50, 50, 0.75);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:auto;
 }
+
 .home-carousel-control {
     left: -12px;
-    height: 40px;
+    height: 0px;
     width: 40px;
-    background: none repeat scroll 0 0 #222222;
-    border: 3px solid #FFFFFF;
-    border-radius: 23px 23px 23px 23px;
     margin-top: 75px;
 }
 
@@ -343,7 +352,7 @@ td a{
     margin-right: -19px;
 }
 
-/* The colour of the indicators */
+/* The color of the indicators */
 .home-carousel-indicators li {
     background: #cecece;
 }
@@ -352,110 +361,199 @@ td a{
     background: #222222;
 }
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
+
+/*popup images of slider*/
+.mfp-no-margins img.mfp-img {
+    padding: 20px;
+}
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    bottom: 0;
 }
-
-/* Modal Content (image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-/* Caption of Modal Image */
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
-
-/* Add Animation */
-.modal-content, #caption {
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)}
-    to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-}
-
-/* The Close Button */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+    padding: 0;
 }
 
 
+/*contact form*/
 #Kontakt{
+    background-image:url('../img/cube2.png');
+    background-repeat:no-repeat;
+    background-position: 117% 20%;
     background-color: rgba(211,212,185,0.8);
-}
-
-.contact-cube{
-    float: right;
 }
 
 .form-company{
     margin-top: 80px;
 }
-.Kontakt h3{
+#Kontakt h3, h4{
     font-family: 'Lora', serif;
     color:rgb(137,134,124);
 }
-#home-contact-form{
+
+.home-contact-form{
     border-radius: 2px;
 }
 
-.residence-info img{
-    width: 50%;
+.contact-button{
+    width: 100px;
+    float:right;
 }
 
-.company-list{
-    float:right;
-    border-left: solid 1px rgb(186,185,167);
-    margin-right: 213px;
-    margin-top: 50px;
+/*ajax form*/
+.success, .error{
+    height: 250px;
+    background-color: white;
+    border: solid 5px #B1C394;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hide-contact-message{
+    display: none;
+}
+
+.contact-message{
+    color:rgb(137,134,124);
+    text-align: center;
+    margin: auto;
+}
+
+/*company info*/
+.residence-info{
+    position: absolute;
+    left: 175px;
+    top: 110px;
+}
+.residence-info img{
+    width: 302.500px;
+}
+
+.company-lists{
+    height: 190px;
+    border-left: solid 2px rgb(186,185,167);
+    margin-top: 85px;
+    margin-left: 77.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.company-list-mobile{
+    display: none;
 }
 
 .company-list div{
+    font-size: 20px;
     font-family: 'Raleway', sans-serif;
+    font-weight: 300;
     color:rgb(137,134,124);
     padding: 5px 0px 5px 10px;
 }
+
+
+.button-to-top{
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(137,134,124, 0.7);
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+@media screen and (min-width: 576px) {
+
+}
+
+/* xs < 768 */
+@media screen and (max-width:767px) {
+    .contact-init {
+        width: 80%;
+        margin: auto;
+    }
+
+    .residence-info{
+        width: 80%;
+        position: static;
+        left: 0px;
+        top: 0px;
+        margin: auto;
+    }
+
+    .company-logo{
+        width: 80%;
+        margin: auto;
+        padding-top:50px;
+    }
+
+    .residence-info img{
+        width: 100%;
+        margin: auto;
+    }
+
+    .company-lists{
+        width: 80%;
+        height: 90%;
+        border-left: none;
+        margin-top: 50px;
+        margin-left: 0px;
+        margin: auto;
+        padding-top:50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .company-list{
+        display: none;
+    }
+
+    .company-list-mobile{
+        display: unset;
+        width: 100%;
+    }
+
+
+    .company-list-mobile div{
+        font-size: 20px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        color:rgb(137,134,124);
+        padding: 10px 0px 10px 0px;
+        width: 100%;
+        text-align: center;
+    }
+
+
+}
+
+
+/* 767 < sm < 992 */
+@media screen and (min-width:768px) and (max-width:991px){
+    .contact-init{
+        width: 60%;
+        margin: auto;
+    }
+}
+
+/* 991 < md < 1200 */
+@media screen and (min-width:992px) and (max-width:1199px){
+
+}
+
+/* lg < 1200 */
+@media screen and (min-width:1200px){
+}
+
+

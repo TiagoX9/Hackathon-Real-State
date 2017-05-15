@@ -92,8 +92,8 @@ if($honeypot == 'http://' && empty($humancheck)) {
         }
         $result = 'fail';
     }else{
-        send_email($_POST['email'], 'customer-email.php' ,'[Rezidence Želanského] Thank you for contacting us!'); //send to user
-        send_email('tomomi.suda03@gmail.com', 'admin-email.php', '[Rezidence Želanského] Contact from a customer');// send to admin
+//        send_email($_POST['email'], 'customer-email.php' ,'[Rezidence Želanského] Thank you for contacting us!'); //send to user
+//        send_email('tomomi.suda03@gmail.com', 'admin-email.php', '[Rezidence Želanského] Contact from a customer');// send to admin
 
         $messages[] = ['type' => 'success', 'text' => '<h4>Thank you for contacting us!</h4>'];
     }

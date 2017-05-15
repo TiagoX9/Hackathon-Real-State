@@ -10,7 +10,7 @@
     <style>
         .mail {
             background-color: #EBEBEB;
-            width: 70%;
+            width: 80%;
             margin: auto;
             padding: 3% 3% 3% 3%
         }
@@ -51,13 +51,60 @@
             margin: auto;
         }
 
+        @media screen and (max-width:767px) {
+            .mail {
+                width: 90%;
+                margin: auto;
+                padding: 3% 3% 3% 3%;
+            }
+
+            .logo {
+                width: 70%;
+                margin: 20px auto;
+
+            }
+
+            h1 {
+                margin: auto;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .notice {
+                text-align: center;
+            }
+
+            h3 {
+                width: 90%;
+                height: 30px;
+                margin: auto;
+                text-align: center;
+                color: #B1C393;
+            }
+
+            .message {
+                background-color: white;
+                border: solid 5px #D9DED5;
+                width: 85%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin: 5% auto;
+            }
+
+            .message-contents {
+                width: 85%;
+                margin: auto;
+            }
+        }
+
+
     </style>
 </head>
 <body>
 <div class="mail">
     <div class="logo">
         <img src="cid:logo-brown" width="100%">
-        <!--        <img src="../img/logo-brown.png" width="100%">-->
+<!--                <img src="../img/logo-brown.png" width="100%">-->
     </div>
     <h1>Thank you for your contact!</h1>
     <p class="notice">We received your message properly, your request is in process, we will answer you in shortest
@@ -66,13 +113,13 @@
 
     <div class="message">
         <h3>Your message</h3>
-        <div class="message-contents">
-            <p>First name: Tomomi </p>
-            <p>Last name: Suda</p>
-            <p>Phone number: +420-000-000-000</p>
-            <p>Email: aaa@mail.com</p>
-            <p>Message: I would like to get more information.</p>
-        </div>
+<!--        <div class="message-contents">-->
+<!--            <p>First name: Tomomi </p>-->
+<!--            <p>Last name: Suda</p>-->
+<!--            <p>Phone number: +420-000-000-000</p>-->
+<!--            <p>Email: aaa@mail.com</p>-->
+<!--            <p>Message: I would like to get more information.</p>-->
+<!--        </div>-->
 
         <div class="message-contents">
             <p>First name: <?php echo $_POST['firstname']; ?></p>

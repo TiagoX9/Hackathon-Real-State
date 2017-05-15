@@ -6,11 +6,6 @@
 require 'class.phpmailer.php';
 require 'class.smtp.php';
 require 'mail-config.php';
-//$config = array(
-//    'server' => 'smtp.gmail.com',
-//    'emailaddress' => '',//don't use primary email. create original one.
-//    'password' => ''
-//);
 
 //validation//
 sleep(3);
@@ -48,19 +43,12 @@ if($honeypot == 'http://' && empty($humancheck)){
     }
 
     if(!empty($errors)){
-
-        $return['error'] = true;
-        $return['msg'] = "<h4>The request was successful but your is not filled out correctly.</h4>" . $errors;
-        echo json_encode($return);
+        echo '<h4>The request was successful but your form is not filled out correctly.</h4>';
     }else{
-        $return['error'] = false;
-        $return['msg'] = "<h4>Thank you for contacting us!</h4>";
-        echo json_encode($return);
+        echo '<h4>Thank you for contacting us!</h4>';
     }
 } else{
-    $return['error'] = true;
-    $return['msg'] = "<h4>There was a problem with submission. Please try again.</h4>";
-    echo json_encode($return);
+    echo '<h4>There was a problem with submission. Please try again.</h4>';
 }
 
 function send_email($to_address, $template, $subject)

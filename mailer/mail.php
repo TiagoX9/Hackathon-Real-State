@@ -7,6 +7,10 @@ require 'class.phpmailer.php';
 require 'class.smtp.php';
 require 'mail-config.php';
 
+// any messages that will be added along the way
+$result = 'success'; // the final result of the request (success|fail)
+$messages = [];
+
 //validation//
 sleep(3);
 
@@ -21,34 +25,6 @@ $humancheck = $_POST['humancheck'];
 if(empty($_POST)){
     echo 'not a POST';
     exit();
-}
-
-if($honeypot == 'http://' && empty($humancheck)){
-    $errors = array();
-
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $errors[] = "<p>Invalid email format.</p>";
-    }
-
-    if(empty($firstname)){
-        $errors[] = "<p>Please provide your first name.</p>";
-    }
-
-    if(empty($surname)){
-        $errors[] = "<p>Please provide your surname.</p>";
-    }
-
-    if(empty($yourMessage)){
-        $errors[] = "<p>Message is required.</p>";
-    }
-
-    if(!empty($errors)){
-        echo '<h4>The request was successful but your form is not filled out correctly.</h4>';
-    }else{
-        echo '<h4>Thank you for contacting us!</h4>';
-    }
-} else{
-    echo '<h4>There was a problem with submission. Please try again.</h4>';
 }
 
 function send_email($to_address, $template, $subject)
@@ -89,8 +65,49 @@ function send_email($to_address, $template, $subject)
 
 }
 
-send_email($_POST['email'], 'customer-email.php' ,'[Rezidence Želanského] Thank you for contacting us!'); //send to user
-send_email('tomomi.suda03@gmail.com', 'admin-email.php', '[Rezidence Želanského] Contact from a customer');// send to admin
+if($honeypot == 'http://' && empty($humancheck)) {
+    $errors = array();
 
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "<p>Invalid email format.</p>";
+    }
 
+    if(empty($firstname)){
+        $errors[] = "<p>Please provide your first name.</p>";
+    }
+
+    if(empty($surname)){
+        $errors[] = "<p>Please provide your surname.</p>";
+    }
+
+    if(empty($yourMessage)){
+        $errors[] = "<p>Message is required.</p>";
+    }
+
+    if(!empty($errors)){
+        $messages[] = ['type' => 'error', 'text' => '<h4>The request was successful but your form is not filled out correctly.</h4>'];
+        foreach($errors as $error) 
+        {
+            $messages[] = ['type' => 'error', 'text' => $error];
+        }
+        $result = 'fail';
+    }else{
+        send_email($_POST['email'], 'customer-email.php' ,'[Rezidence Želanského] Thank you for contacting us!'); //send to user
+        send_email('tomomi.suda03@gmail.com', 'admin-email.php', '[Rezidence Želanského] Contact from a customer');// send to admin
+
+        $messages[] = ['type' => 'success', 'text' => '<h4>Thank you for contacting us!</h4>'];
+    }
+} else{
+    $messages[] = ['type' => 'error', 'text' => '<h4>There was a problem with submission. Please try again.</h4>'];
+    $result = 'fail';
+}
+
+header('Content-Type: application/json');
+header("Cache-Control: no-cache, must-revalidate");
+
+echo json_encode([
+    'result' => $result,
+    'messages' => $messages
+]);
+exit();
 //header('Location: ../index.html');

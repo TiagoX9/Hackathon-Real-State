@@ -453,6 +453,11 @@
                     </div>
                 </div>
 
+                <div class="failed" style="display: none">
+                    <div class="contact-messages">
+                    </div>
+                </div>
+
                 <div class="contact-init">
                     <form id="mailer-form" action="mailer/mail.php" method="post" class="form-horizontal">
                         <div class="form-group">
@@ -817,20 +822,30 @@
             timeout: 7000,
             beforeSend: function () {
                 $('.loading').removeClass("hide-contact-message");
+                $('#Kontakt .failed .contact-messages').empty(); // empty the messages always
             },
-        }).done(function (message) {
-            $('.loading').addClass("hide-contact-message");
+        }).done(function (data, status) {
+            if(data.result == 'success') {
+                $('#Kontakt .failed').hide();
 
-            $('#mailer-form').closest('.contact-init').hide();
+                $('#mailer-form').closest('.contact-init').hide();
 
-            $('.hide-contact-message.success').show();
+                $('.hide-contact-message.success').show();
+            } else {
+                $('#Kontakt .failed').show(); // show the element for messages
+                var msgs_list = $('#Kontakt .failed .contact-messages'); // find the container for messages within
+                msgs_list.empty(); // empty the container for messages
+                $.each(data.messages, function(i, message) { // for each of the messages in the response
+                    msgs_list.append($('<div class="message message-'+message.type+'">'+message.text+'</div>'));
+                });
+            }
 
         }).fail(function () {
-            $('.loading').addClass("hide-contact-message");
-
             $('#mailer-form').closest('.contact-init').hide();
 
             $('.hide-contact-message.error').show();
+        }).always(function() {
+            $('.loading').addClass("hide-contact-message");
         })
     })
 

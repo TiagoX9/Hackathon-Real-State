@@ -17,356 +17,179 @@
     <script src="https://cdn.mapkit.io/v1/infobox.js"></script>
 
     <title>Rezidence Želanského</title>
-    <style>
-        #map {
-            height: 400px;
-            width: 100%;
-        }
-    </style>
+
 </head>
 
 <body>
 
-<div class="container-fluid contentor" id="home">
-    <div class="row">
-        <div class="col-xs-12 col-md-12 background">
-            <div class="row">
-                <div class="col-xs-12 col-md-6">
-                    <img class="img img-responsive logo" src="img/logo.png">
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="navbar2">
-                        <a href="#oprojektu">
-                            <h5 class="navtext">O projektu</h5>
-                        </a>
-                        <a href="#Lokalita">
-                            <h5 class="navtext">Lokalita</h5>
-                        </a>
-                        <a href="#Přehledbytůacen">
-                            <h5 class="navtext">Přehled bytů a cen</h5>
-                        </a>
-                        <a href="#Galerie">
-                            <h5 class="navtext">Galerie</h5>
-                        </a>
-                        <a href="#Kontakt">
-                            <h5 class="navtext">Kontakt</h5>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-xs-12 ">
-                <img class="headerbottomimage" src="img/dice.png" alt="dice">
-            </div>
-            <div class="col-md-6 col-xs-0">
-            </div>
-        </div>
-        <div class="row mobilerow">
-            <div class="col-md-6 col-xs-0">
-            </div>
-            <div class="bottomrow col-md-6 col-xs-12">
-                <h1 class="headertitlebottom">K nastěhování xx / 2018</h1>
-            </div>
-        </div>
-    </div>
-</div>
+<!--<div class="container-fluid contentor" id="home">-->
+    <!--<div class="row">-->
+        <!--<div class="col-xs-12 col-md-12 background">-->
+            <!--<div class="row">-->
+                <!--<div class="col-xs-12 col-md-6">-->
+                    <!--<img class="img img-responsive logo" src="img/logo.png">-->
+                <!--</div>-->
+                <!--<div class="col-xs-12 col-md-6">-->
+                    <!--<div class="navbar2">-->
+                        <!--<a href="#oprojektu">-->
+                            <!--<h5 class="navtext">O projektu</h5>-->
+                        <!--</a>-->
+                        <!--<a href="#Lokalita">-->
+                            <!--<h5 class="navtext">Lokalita</h5>-->
+                        <!--</a>-->
+                        <!--<a href="#Přehledbytůacen">-->
+                            <!--<h5 class="navtext">Přehled bytů a cen</h5>-->
+                        <!--</a>-->
+                        <!--<a href="#Galerie">-->
+                            <!--<h5 class="navtext">Galerie</h5>-->
+                        <!--</a>-->
+                        <!--<a href="#Kontakt">-->
+                            <!--<h5 class="navtext">Kontakt</h5>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-6 col-xs-12 ">-->
+                <!--<img class="headerbottomimage" src="img/dice.png" alt="dice">-->
+            <!--</div>-->
+            <!--<div class="col-md-6 col-xs-0">-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row mobilerow">-->
+            <!--<div class="col-md-6 col-xs-0">-->
+            <!--</div>-->
+            <!--<div class="bottomrow col-md-6 col-xs-12">-->
+                <!--<h1 class="headertitlebottom">K nastěhování xx / 2018</h1>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
 
 
-<!-- DESCRIPTION -->
-<div id="oprojektu" class="container-fluid description">
-    <div class="row">
-        <div class="col-xs-0 col-md-1">
-        </div>
-        <div class="col-xs-12 col-md-5">
-            <h1 class="descriptiontitle"> Brožura ke stažení</h1>
-        </div>
-        <div class="col-xs-0 col-md-3">
-        </div>
-        <div class="col-xs-0 col-md-3">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-0 col-md-3">
-        </div>
-        <div class="col-xs-12 col-md-3">
+<!--&lt;!&ndash; DESCRIPTION &ndash;&gt;-->
+<!--<div id="oprojektu" class="container-fluid description">-->
+    <!--<div class="row">-->
+        <!--<div class="col-xs-0 col-md-1">-->
+        <!--</div>-->
+        <!--<div class="col-xs-12 col-md-5">-->
+            <!--<h1 class="descriptiontitle"> Brožura ke stažení</h1>-->
+        <!--</div>-->
+        <!--<div class="col-xs-0 col-md-3">-->
+        <!--</div>-->
+        <!--<div class="col-xs-0 col-md-3">-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+        <!--<div class="col-xs-0 col-md-3">-->
+        <!--</div>-->
+        <!--<div class="col-xs-12 col-md-3">-->
 
-            <img class="img img-responsive houses" src="img/house1.png">
-        </div>
-        <div class=" descriptiontext col-xs-12 col-md-3">
-            <h1 class="maintitle"> O projektu </h1>
-            <p class="textbody">Vysoce kvalitní bydlení citlivě zasazené do staré zástavby. Rezidence Želanského je
-                4-patrový dům s 9 byty
-                a 1 ateliérem o velikosti v rozmezí 1KK (34.1 m2) až mezonetové 4KK (150,1 m2).<br>
-                <br> Byt je možné zakoupits balkonem, terasou, předzahrádkou či podkrovní galerií. Rezidence Želanského
-                nabízí kryté i venkovní parkování, sklepy, kočárkárnu či sušárnu.</p>
-        </div>
-        <div class="col-xs-0 col-md-3">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-0 col-md-3">
-        </div>
-        <div class="col-xs-12 col-md-3">
-            <img class="img img-responsive houses" src="img/house1.png">
-        </div>
-        <div class="col-xs-12 col-md-3 descriptiontext1">
-            <h1 class="maintitle">Dispozice domu</h1>
-            <p class="textbody">Rezidence Želanského má charakter rodinného klidného bydlení. Dům je rozdělen na přízemí
-                a 4 nadzemní podlaží
-                a skýtá 9 bytů a 1 ateliér.<br>
-                <br>
-                <span class="titles">Přízemí</span> navíc nabízi parkovací garáže pro 2 a 3 vozy či venkovní krytá
-                parkování
-                pro 4 vozy, dále 9 sklepů, kočárkárnu a sušárnu.<br>
-                <br>
-                <span class="titles">První podlaží</span> nabízí 3 byty o dispozici 1KK s prostornou předzahrádkou a
-                terasou.
-                <br>
-                <br>
-                <span class="titles">Druhé podlaží</span> nabízí 4 byty o dispozici 1KK s jedním balkonem či 3KK se
-                dvěma
-                balkony.
-                <br>
-                <br>
-                <span class="titles">Třetí a čtvrté</span> nadzemní podlaží obsahuje 2 nadstandardní mezonetové byty
-                o dispozic 4KK s podkrovní galerií a balkony </p>
-        </div>
-        <div class="col-xs-0 col-md-3">
-        </div>
-    </div>
-</div>
+            <!--<img class="img img-responsive houses" src="img/house1.png">-->
+        <!--</div>-->
+        <!--<div class=" descriptiontext col-xs-12 col-md-3">-->
+            <!--<h1 class="maintitle"> O projektu </h1>-->
+            <!--<p class="textbody">Vysoce kvalitní bydlení citlivě zasazené do staré zástavby. Rezidence Želanského je-->
+                <!--4-patrový dům s 9 byty-->
+                <!--a 1 ateliérem o velikosti v rozmezí 1KK (34.1 m2) až mezonetové 4KK (150,1 m2).<br>-->
+                <!--<br> Byt je možné zakoupits balkonem, terasou, předzahrádkou či podkrovní galerií. Rezidence Želanského-->
+                <!--nabízí kryté i venkovní parkování, sklepy, kočárkárnu či sušárnu.</p>-->
+        <!--</div>-->
+        <!--<div class="col-xs-0 col-md-3">-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row">-->
+        <!--<div class="col-xs-0 col-md-3">-->
+        <!--</div>-->
+        <!--<div class="col-xs-12 col-md-3">-->
+            <!--<img class="img img-responsive houses" src="img/house1.png">-->
+        <!--</div>-->
+        <!--<div class="col-xs-12 col-md-3 descriptiontext1">-->
+            <!--<h1 class="maintitle">Dispozice domu</h1>-->
+            <!--<p class="textbody">Rezidence Želanského má charakter rodinného klidného bydlení. Dům je rozdělen na přízemí-->
+                <!--a 4 nadzemní podlaží-->
+                <!--a skýtá 9 bytů a 1 ateliér.<br>-->
+                <!--<br>-->
+                <!--<span class="titles">Přízemí</span> navíc nabízi parkovací garáže pro 2 a 3 vozy či venkovní krytá-->
+                <!--parkování-->
+                <!--pro 4 vozy, dále 9 sklepů, kočárkárnu a sušárnu.<br>-->
+                <!--<br>-->
+                <!--<span class="titles">První podlaží</span> nabízí 3 byty o dispozici 1KK s prostornou předzahrádkou a-->
+                <!--terasou.-->
+                <!--<br>-->
+                <!--<br>-->
+                <!--<span class="titles">Druhé podlaží</span> nabízí 4 byty o dispozici 1KK s jedním balkonem či 3KK se-->
+                <!--dvěma-->
+                <!--balkony.-->
+                <!--<br>-->
+                <!--<br>-->
+                <!--<span class="titles">Třetí a čtvrté</span> nadzemní podlaží obsahuje 2 nadstandardní mezonetové byty-->
+                <!--o dispozic 4KK s podkrovní galerií a balkony </p>-->
+        <!--</div>-->
+        <!--<div class="col-xs-0 col-md-3">-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
 
 <!-- LOCATION -->
-<div id="Lokalita" class=" location container-fluid ">
-    <div class="row">
-        <div class="col-xs-0 col-md-2">
-        </div>
-        <div class="col-xs-12 col-md-3 lokalita">
-            <h1 class="maintitle"> Lokalita </h1>
-            <p class="textbody">Rezidence Želanského se nachází v klidné vilové čtvrti v pražské části Praha 6 s
-                výbornou dopravní dostupností
-                jak do centra města, tak na letiště Václava Havla. Přímo před domem se nachází zastávka autobusu,
-                v docházkové vzdálenosti od rezidence jsou široké možnosti nákupů s několika obchodními domy.
-                Občanská
-                vybavenost okolí (školky, pošta, nemocnice atd.) je nadstandardní.</p>
-            <img class="img img-responsive graphics" src="img/graphics.png">
-        </div>
-        <div class="col-xs-12 col-md-6">
-            <script>
-                google.maps.event.addDomListener(window, 'load', init);
-                var map, markersArray = [];
+<!--<div id="Lokalita" class=" location container-fluid ">-->
+<!--<div class="row">-->
+<!--<div class="col-xs-0 col-md-2">-->
+<!--</div>-->
+<!--<div class="col-xs-12 col-md-3 lokalita">-->
+<!--<h1 class="maintitle"> Lokalita </h1>-->
+<!--<p class="textbody">Rezidence Želanského se nachází v klidné vilové čtvrti v pražské části Praha 6 s-->
+<!--výbornou dopravní dostupností-->
+<!--jak do centra města, tak na letiště Václava Havla. Přímo před domem se nachází zastávka autobusu,-->
+<!--v docházkové vzdálenosti od rezidence jsou široké možnosti nákupů s několika obchodními domy.-->
+<!--Občanská-->
+<!--vybavenost okolí (školky, pošta, nemocnice atd.) je nadstandardní.</p>-->
+<!--<img class="img img-responsive graphics" src="img/graphics.png">-->
+<!--</div>-->
+<!--<div class="col-xs-12 col-md-6">-->
 
-                function bindInfoWindow(marker, map, location) {
-                    google.maps.event.addListener(marker, 'click', function () {
-                        function close(location) {
-                            location.ib.close();
-                            location.infoWindowVisible = false;
-                            location.ib = null;
-                        }
+<!--<style>-->
+<!--#mapkit-7239 {-->
+<!--height: 400px;-->
+<!--width: 600px;-->
+<!--}-->
+<!--</style>-->
 
-                        if (location.infoWindowVisible === true) {
-                            close(location);
-                        } else {
-                            markersArray.forEach(function (loc, index) {
-                                if (loc.ib && loc.ib !== null) {
-                                    close(loc);
-                                }
-                            });
+<!--<div id='mapkit-7239'></div>-->
 
-                            var boxText = document.createElement('div');
-                            boxText.style.cssText = 'background: #fff;';
-                            boxText.classList.add('md-whiteframe-2dp');
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
 
-                            function buildPieces(location, el, part, icon) {
-                                if (location[part] === '') {
-                                    return '';
-                                } else if (location.iw[part]) {
-                                    switch (el) {
-                                        case 'photo':
-                                            if (location.photo) {
-                                                return '<div class="iw-photo" style="background-image: url(' + location.photo + ');"></div>';
-                                            } else {
-                                                return '';
-                                            }
-                                            break;
-                                        case 'iw-toolbar':
-                                            return '<div class="iw-toolbar"><h3 class="md-subhead">' + location.title + '</h3></div>';
-                                            break;
-                                        case 'div':
-                                            switch (part) {
-                                                case 'email':
-                                                    return '<div class="iw-details"><i class="material-icons" style="color:#4285f4;"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><span><a href="mailto:' + location.email + '" target="_blank">' + location.email + '</a></span></div>';
-                                                    break;
-                                                case 'web':
-                                                    return '<div class="iw-details"><i class="material-icons" style="color:#4285f4;"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><span><a href="' + location.web + '" target="_blank">' + location.web_formatted + '</a></span></div>';
-                                                    break;
-                                                case 'desc':
-                                                    return '<label class="iw-desc" for="cb_details"><input type="checkbox" id="cb_details"/><h3 class="iw-x-details">Details</h3><i class="material-icons toggle-open-details"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><p class="iw-x-details">' + location.desc + '</p></label>';
-                                                    break;
-                                                default:
-                                                    return '<div class="iw-details"><i class="material-icons"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><span>' + location[part] + '</span></div>';
-                                                    break;
-                                            }
-                                            break;
-                                        case 'open_hours':
-                                            var items = '';
-                                            if (location.open_hours.length > 0) {
-                                                for (var i = 0; i < location.open_hours.length; ++i) {
-                                                    if (i !== 0) {
-                                                        items += '<li><strong>' + location.open_hours[i].day + '</strong><strong>' + location.open_hours[i].hours + '</strong></li>';
-                                                    }
-                                                    var first = '<li><label for="cb_hours"><input type="checkbox" id="cb_hours"/><strong>' + location.open_hours[0].day + '</strong><strong>' + location.open_hours[0].hours + '</strong><i class="material-icons toggle-open-hours"><img src="//cdn.mapkit.io/v1/icons/keyboard_arrow_down.svg"/></i><ul>' + items + '</ul></label></li>';
-                                                }
-                                                return '<div class="iw-list"><i class="material-icons first-material-icons" style="color:#4285f4;"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><ul>' + first + '</ul></div>';
-                                            } else {
-                                                return '';
-                                            }
-                                            break;
-                                    }
-                                } else {
-                                    return '';
-                                }
-                            }
+<section id="Lokalita" class="location">
+    <div class="container">
+        <div class="row location-wapper">
+            <div class="col-xs-12 col-md-6 lokalita">
+                <div class="lokalita-contents">
+                <h3>LOKALITA</h3>
+                <p class="textbody">
+                    Rezidence Želanského se nachází v klidné vilové čtvrti v pražské části Praha 6 s
+                    výbornou dopravní dostupností
+                    jak do centra města, tak na letiště Václava Havla. Přímo před domem se nachází zastávka
+                    autobusu,
+                    v docházkové vzdálenosti od rezidence jsou široké možnosti nákupů s několika obchodními domy.
+                    Občanská
+                    vybavenost okolí (školky, pošta, nemocnice atd.) je nadstandardní.
+                </p>
+                </div>
 
-                            boxText.innerHTML =
-                                buildPieces(location, 'photo', 'photo', '') +
-                                buildPieces(location, 'iw-toolbar', 'title', '') +
-                                buildPieces(location, 'div', 'address', 'location_on') +
-                                buildPieces(location, 'div', 'web', 'public') +
-                                buildPieces(location, 'div', 'email', 'email') +
-                                buildPieces(location, 'div', 'tel', 'phone') +
-                                buildPieces(location, 'div', 'int_tel', 'phone') +
-                                buildPieces(location, 'open_hours', 'open_hours', 'access_time') +
-                                buildPieces(location, 'div', 'desc', 'keyboard_arrow_down');
+            </div>
+            <div class="col-xs-12 col-md-6">
 
-                            var myOptions = {
-                                alignBottom: true,
-                                content: boxText,
-                                disableAutoPan: true,
-                                maxWidth: 0,
-                                pixelOffset: new google.maps.Size(-140, -40),
-                                zIndex: null,
-                                boxStyle: {
-                                    opacity: 1,
-                                    width: '280px'
-                                },
-                                closeBoxMargin: '0px 0px 0px 0px',
-                                infoBoxClearance: new google.maps.Size(1, 1),
-                                isHidden: false,
-                                pane: 'floatPane',
-                                enableEventPropagation: false
-                            };
+                <div id='mapkit-7239'></div>
 
-                            location.ib = new InfoBox(myOptions);
-                            location.ib.open(map, marker);
-                            location.infoWindowVisible = true;
-                        }
-                    });
-                }
-
-                function init() {
-                    var mapOptions = {
-                        center: new google.maps.LatLng(50.0717948668323, 14.302477981826769),
-                        zoom: 15,
-                        gestureHandling: 'auto',
-                        fullscreenControl: false,
-                        zoomControl: true,
-                        disableDoubleClickZoom: true,
-                        mapTypeControl: true,
-                        mapTypeControlOptions: {
-                            style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-                        },
-                        scaleControl: true,
-                        scrollwheel: true,
-                        streetViewControl: true,
-                        draggable: true,
-                        clickableIcons: true,
-                        mapTypeId: google.maps.MapTypeId.ROADMAP,
-                        styles: [{"stylers": [{"saturation": 100}, {"gamma": 0.6}]}]
-                    }
-                    var mapElement = document.getElementById('mapkit-7239');
-                    var map = new google.maps.Map(mapElement, mapOptions);
-                    var locations = [
-                        {
-                            "title": "Žalanského 263/22",
-                            "address": "Žalanského 263/22, Řepy, 163 00 Praha-Praha 17, Chéquia",
-                            "desc": "",
-                            "tel": "",
-                            "int_tel": "",
-                            "email": "",
-                            "web": "",
-                            "web_formatted": "",
-                            "open": "",
-                            "time": "",
-                            "lat": 50.07158450000001,
-                            "lng": 14.302277799999956,
-                            "vicinity": "Praha 17",
-                            "open_hours": "",
-                            "marker": {
-                                "url": "https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi_hdpi.png",
-                                "scaledSize": {"width": 25, "height": 42, "j": "px", "f": "px"},
-                                "origin": {"x": 0, "y": 0},
-                                "anchor": {"x": 12, "y": 42}
-                            },
-                            "iw": {
-                                "address": true,
-                                "desc": true,
-                                "email": true,
-                                "enable": true,
-                                "int_tel": true,
-                                "open": true,
-                                "open_hours": true,
-                                "photo": true,
-                                "tel": true,
-                                "title": true,
-                                "web": true
-                            }
-                        }
-                    ];
-
-                    var layer = new google.maps.BicyclingLayer();
-                    layer.setMap(map);
-
-                    for (i = 0; i < locations.length; i++) {
-                        marker = new google.maps.Marker({
-                            icon: locations[i].marker,
-                            position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
-                            map: map,
-                            title: locations[i].title,
-                            address: locations[i].address,
-                            desc: locations[i].desc,
-                            tel: locations[i].tel,
-                            int_tel: locations[i].int_tel,
-                            vicinity: locations[i].vicinity,
-                            open: locations[i].open,
-                            open_hours: locations[i].open_hours,
-                            photo: locations[i].photo,
-                            time: locations[i].time,
-                            email: locations[i].email,
-                            web: locations[i].web,
-                            iw: locations[i].iw
-                        });
-                        markersArray.push(marker);
-
-                        if (locations[i].iw.enable === true) {
-                            bindInfoWindow(marker, map, locations[i]);
-                        }
-                    }
-                }
-            </script>
-            <style>
-                #mapkit-7239 {
-                    height: 400px;
-                    width: 600px;
-                }
-            </style>
-
-            <div id='mapkit-7239'></div>
+            </div>
 
         </div>
+
     </div>
-</div>
+</section>
 
 <!-- NAVBAR MOBILE -->
 <!-- MOBILE BAR -->
@@ -730,6 +553,177 @@
             $('.button-to-top').fadeOut(200);
         }
     });
+
+    //map//
+    google.maps.event.addDomListener(window, 'load', init);
+    var map, markersArray = [];
+
+    function bindInfoWindow(marker, map, location) {
+        google.maps.event.addListener(marker, 'click', function() {
+            function close(location) {
+                location.ib.close();
+                location.infoWindowVisible = false;
+                location.ib = null;
+            }
+
+            if (location.infoWindowVisible === true) {
+                close(location);
+            } else {
+                markersArray.forEach(function(loc, index){
+                    if (loc.ib && loc.ib !== null) {
+                        close(loc);
+                    }
+                });
+
+                var boxText = document.createElement('div');
+                boxText.style.cssText = 'background: #fff;';
+                boxText.classList.add('md-whiteframe-2dp');
+
+                function buildPieces(location, el, part, icon) {
+                    if (location[part] === '') {
+                        return '';
+                    } else if (location.iw[part]) {
+                        switch(el){
+                            case 'photo':
+                                if (location.photo){
+                                    return '<div class="iw-photo" style="background-image: url(' + location.photo + ');"></div>';
+                                } else {
+                                    return '';
+                                }
+                                break;
+                            case 'iw-toolbar':
+                                return '<div class="iw-toolbar"><h3 class="md-subhead">' + location.title + '</h3></div>';
+                                break;
+                            case 'div':
+                                switch(part){
+                                    case 'email':
+                                        return '<div class="iw-details"><i class="material-icons" style="color:#4285f4;"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><span><a href="mailto:' + location.email + '" target="_blank">' + location.email + '</a></span></div>';
+                                        break;
+                                    case 'web':
+                                        return '<div class="iw-details"><i class="material-icons" style="color:#4285f4;"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><span><a href="' + location.web + '" target="_blank">' + location.web_formatted + '</a></span></div>';
+                                        break;
+                                    case 'desc':
+                                        return '<label class="iw-desc" for="cb_details"><input type="checkbox" id="cb_details"/><h3 class="iw-x-details">Details</h3><i class="material-icons toggle-open-details"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><p class="iw-x-details">' + location.desc + '</p></label>';
+                                        break;
+                                    default:
+                                        return '<div class="iw-details"><i class="material-icons"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><span>' + location[part] + '</span></div>';
+                                        break;
+                                }
+                                break;
+                            case 'open_hours':
+                                var items = '';
+                                if (location.open_hours.length > 0){
+                                    for (var i = 0; i < location.open_hours.length; ++i) {
+                                        if (i !== 0){
+                                            items += '<li><strong>' + location.open_hours[i].day + '</strong><strong>' + location.open_hours[i].hours +'</strong></li>';
+                                        }
+                                        var first = '<li><label for="cb_hours"><input type="checkbox" id="cb_hours"/><strong>' + location.open_hours[0].day + '</strong><strong>' + location.open_hours[0].hours +'</strong><i class="material-icons toggle-open-hours"><img src="//cdn.mapkit.io/v1/icons/keyboard_arrow_down.svg"/></i><ul>' + items + '</ul></label></li>';
+                                    }
+                                    return '<div class="iw-list"><i class="material-icons first-material-icons" style="color:#4285f4;"><img src="//cdn.mapkit.io/v1/icons/' + icon + '.svg"/></i><ul>' + first + '</ul></div>';
+                                } else {
+                                    return '';
+                                }
+                                break;
+                        }
+                    } else {
+                        return '';
+                    }
+                }
+
+                boxText.innerHTML =
+                    buildPieces(location, 'photo', 'photo', '') +
+                    buildPieces(location, 'iw-toolbar', 'title', '') +
+                    buildPieces(location, 'div', 'address', 'location_on') +
+                    buildPieces(location, 'div', 'web', 'public') +
+                    buildPieces(location, 'div', 'email', 'email') +
+                    buildPieces(location, 'div', 'tel', 'phone') +
+                    buildPieces(location, 'div', 'int_tel', 'phone') +
+                    buildPieces(location, 'open_hours', 'open_hours', 'access_time') +
+                    buildPieces(location, 'div', 'desc', 'keyboard_arrow_down');
+
+                var myOptions = {
+                    alignBottom: true,
+                    content: boxText,
+                    disableAutoPan: true,
+                    maxWidth: 0,
+                    pixelOffset: new google.maps.Size(-140, -40),
+                    zIndex: null,
+                    boxStyle: {
+                        opacity: 1,
+                        width: '280px'
+                    },
+                    closeBoxMargin: '0px 0px 0px 0px',
+                    infoBoxClearance: new google.maps.Size(1, 1),
+                    isHidden: false,
+                    pane: 'floatPane',
+                    enableEventPropagation: false
+                };
+
+                location.ib = new InfoBox(myOptions);
+                location.ib.open(map, marker);
+                location.infoWindowVisible = true;
+            }
+        });
+    }
+
+    function init() {
+        var mapOptions = {
+            center: new google.maps.LatLng(50.07149187928376,14.301308538696276),
+            zoom: 15,
+            gestureHandling: 'auto',
+            fullscreenControl: false,
+            zoomControl: true,
+            disableDoubleClickZoom: true,
+            mapTypeControl: true,
+            mapTypeControlOptions: {
+                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+            },
+            scaleControl: true,
+            scrollwheel: true,
+            streetViewControl: true,
+            draggable : true,
+            clickableIcons: false,
+            zoomControlOptions: {
+                position: google.maps.ControlPosition.RIGHT_BOTTOM
+            },
+            mapTypeControlOptions: {
+                position: google.maps.ControlPosition.BOTTOM_LEFT
+            },
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            styles: [{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#bbd5c5"}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"color":"#808080"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#fcf9a2"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#bbd5c5"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#808080"}]}]
+        }
+        var mapElement = document.getElementById('mapkit-7239');
+        var map = new google.maps.Map(mapElement, mapOptions);
+        var locations = [
+            {"title":"Žalanského 263/22","address":"Žalanského 263/22, Řepy, 163 00 Praha-Praha 17, チェコ","desc":"","tel":"","int_tel":"","email":"","web":"","web_formatted":"","open":"","time":"","lat":50.07158450000001,"lng":14.302277799999956,"vicinity":"Praha 17","open_hours":"","marker":{"url":"https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi_hdpi.png","scaledSize":{"width":25,"height":42,"j":"px","f":"px"},"origin":{"x":0,"y":0},"anchor":{"x":12,"y":42}},"iw":{"address":true,"desc":true,"email":true,"enable":true,"int_tel":true,"open":true,"open_hours":true,"photo":true,"tel":true,"title":true,"web":true}}
+        ];
+        for (i = 0; i < locations.length; i++) {
+            marker = new google.maps.Marker({
+                icon: locations[i].marker,
+                position: new google.maps.LatLng(locations[i].lat, locations[i].lng),
+                map: map,
+                title: locations[i].title,
+                address: locations[i].address,
+                desc: locations[i].desc,
+                tel: locations[i].tel,
+                int_tel: locations[i].int_tel,
+                vicinity: locations[i].vicinity,
+                open: locations[i].open,
+                open_hours: locations[i].open_hours,
+                photo: locations[i].photo,
+                time: locations[i].time,
+                email: locations[i].email,
+                web: locations[i].web,
+                iw: locations[i].iw
+            });
+            markersArray.push(marker);
+
+            if (locations[i].iw.enable === true){
+                bindInfoWindow(marker, map, locations[i]);
+            }
+        }
+    }
+
 
     //popup image//
     $(document).ready(function () {

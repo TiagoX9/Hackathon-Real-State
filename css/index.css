@@ -220,6 +220,7 @@ html,body
     color: #969289;
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
+    font-weight: 300;
 }
 .maintitle{
     color: #969289;
@@ -228,45 +229,76 @@ html,body
     font-size: 30px;
 }
 
+/*Location and Map*/
 
-
-/* MAPS */
-
-.location{
+#Lokalita{
+    background-image:url('../img/graphics.png');
+    background-size: 40%;
+    background-repeat:no-repeat;
+    background-position: 15% 100%;
     background-color: #DFDDC6;
-    width: 100vw;
-    height:auto;
-    margin: 0;
-    padding: 0;
+}
+
+.location-wapper{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#Lokalita h3{
+    color:   rgb(139, 139, 136);
+    font-family: 'Lora', serif;
 }
 
 .lokalita{
-    /*width: 50vw;*/
-    margin:40px 30px;
+    padding-left: 0px;
+    margin-top: 50px;
 }
-.graphics{
-    width: 50vw;
-    height: auto;
-}
-@media (max-width: 900px){
-    .lokalita{
 
-        width: 100vw;
-    ;
+#mapkit-7239 {
+    height: 400px;
+    width: 100%;
+    margin: auto;
+}
+
+@media screen and (max-width:991px){
+    #Lokalita{
+        background-image:none;
+        background-color: #DFDDC6;
+    }
+
+    .location-wapper{
+        padding-top: 5px;
+        padding-bottom: 20px;
+    }
+
+    .lokalita{
+        padding-left: 0px;
+        margin-top: 20px;
+    }
+
+    .lokalita-contents{
+        width: 80%;
+        margin: auto;
+    }
+
+    #mapkit-7239{
+        width: 80%;
+        margin: auto;
     }
 }
 
-.graphics {
-    align-self: center;
-    width: 100%;
-    height: 100%;
+@media screen and (max-width:767px){
+    #mapkit-7239{
+        height: 250px;
+    }
 }
 
 /* TABLE */
 #Přehledbytůacen h3 {
     color:   rgb(139, 139, 136);
     font-family: 'Lora', serif;
-
+    margin-top: 80px;
+    margin-bottom: 40px;
 
 }
 .thead-color {

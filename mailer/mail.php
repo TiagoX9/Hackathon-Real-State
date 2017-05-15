@@ -57,9 +57,9 @@ function send_email($to_address, $template, $subject)
     $mail->Body = $html;
 
     if ($mail->send()) {
-        echo 'sent';
+        return true; // all ok
     } else {
-        echo 'not sent';
+        return false; // error        
     }
 
 
@@ -92,10 +92,26 @@ if($honeypot == 'http://' && empty($humancheck)) {
         }
         $result = 'fail';
     }else{
-        send_email($_POST['email'], 'customer-email.php' ,'[Rezidence Želanského] Thank you for contacting us!'); //send to user
-        send_email('tomomi.suda03@gmail.com', 'admin-email.php', '[Rezidence Želanského] Contact from a customer');// send to admin
+        //send to user
+        if(!send_email($_POST['email'], 'customer-email.php' ,'[Rezidence Želanského] Thank you for contacting us!')) 
+        {
+            $result = 'fail';
+        }
+        
+        // send to admin
+        if(!send_email('tomomi.suda03@gmail.com', 'admin-email.php', '[Rezidence Želanského] Contact from a customer')) 
+        {
+            $result = 'fail';
+        }
 
-        $messages[] = ['type' => 'success', 'text' => '<h4>Thank you for contacting us!</h4>'];
+        if($result == 'fail') // one of the sending above did not succeed
+        {
+            $messages[] = ['type' => 'error', 'text' => 'Message was not sent'];
+        }
+        else // both of them succeeded
+        {
+            $messages[] = ['type' => 'success', 'text' => '<h4>Thank you for contacting us!</h4>'];
+        }
     }
 } else{
     $messages[] = ['type' => 'error', 'text' => '<h4>There was a problem with submission. Please try again.</h4>'];

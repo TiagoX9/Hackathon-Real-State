@@ -371,6 +371,12 @@ only screen and (max-width: 1024px),
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+#Galerie > .container {
+    margin-right: 0;
+    margin-left: 0;
+    width: 100%;
 }
 .slide-show{
     margin-top: 20px;

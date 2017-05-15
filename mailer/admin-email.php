@@ -6,12 +6,126 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mail for admin</title>
+    <style>
+        .mail {
+            background-color: #EBEBEB;
+            width: 70%;
+            margin: auto;
+            padding: 3% 3% 3% 3%
+        }
+
+        .logo {
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        h1 {
+            margin: auto;
+            text-align: center;
+        }
+
+        .notice {
+            text-align: center;
+        }
+
+        h3 {
+            width: 30%;
+            height: 30px;
+            margin: auto;
+            text-align: center;
+            color: #B1C393;
+        }
+
+        .message {
+            background-color: white;
+            border: solid 7px #D9DED5;
+            width: 60%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin: 5% auto;
+        }
+
+        .message-contents {
+            width: 85%;
+            margin: auto;
+        }
+
+        @media screen and (max-width:767px) {
+            .mail {
+                width: 90%;
+                margin: auto;
+                padding: 3% 3% 3% 3%;
+            }
+
+            .logo {
+                width: 70%;
+                margin: 20px auto;
+
+            }
+
+            h1 {
+                margin: auto;
+                text-align: center;
+                font-size: 20px;
+            }
+
+            .notice {
+                text-align: center;
+            }
+
+            h3 {
+                width: 90%;
+                height: 30px;
+                margin: auto;
+                text-align: center;
+                color: #B1C393;
+            }
+
+            .message {
+                background-color: white;
+                border: solid 5px #D9DED5;
+                width: 85%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin: 5% auto;
+            }
+
+            .message-contents {
+                width: 85%;
+                margin: auto;
+            }
+        }
+
+    </style>
 </head>
 <body>
-<h2>First name: <?php echo $_POST['firstname']; ?></h2>
-<h2>Last name: <?php echo $_POST['surname']; ?></h2>
-<h2>Phone number: <?php echo $_POST['phone-number']; ?></h2>
-<h2>Email: <?php echo $_POST['email']; ?></h2>
-<h2>Message: <?php echo $_POST['your-message']; ?></h2>
+<div class="mail">
+    <div class="logo">
+        <img src="cid:logo-brown" width="100%">
+    </div>
+    <h1>Message from customer</h1>
+
+    <p class="notice">You received a message from customer.</p>
+
+    <div class="message">
+        <h3>Customer's message</h3>
+<!--        <div class="message-contents">-->
+<!--            <p>First name: Tomomi </p>-->
+<!--            <p>Last name: Suda</p>-->
+<!--            <p>Phone number: +420-000-000-000</p>-->
+<!--            <p>Email: aaa@mail.com</p>-->
+<!--            <p>Message: I would like to get more information.</p>-->
+<!--        </div>-->
+
+        <div class="message-contents">
+            <p>First name: <?php echo $_POST['firstname']; ?></p>
+            <p>Last name: <?php echo $_POST['surname']; ?></p>
+            <p>Phone number: <?php echo $_POST['phone-number']; ?></p>
+            <p>Email: <?php echo $_POST['email']; ?></p>
+            <p>Message: <?php echo $_POST['your-message']; ?></p>
+        </div>
+    </div>
+
+</div>
 </body>
 </html>

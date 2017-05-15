@@ -1,181 +1,171 @@
 /* HEADER */
 
-.header{
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+.background{
     background-color: #928E83;
-   background-image: url("../img/second1.png");
+    background-image: url("../img/second1.png");
     width: 100vw;
-    height: 79.5vh;
-    margin: 0 auto;
-    padding: 0;
+    height: 600px;
 }
-.navbar{
-   display: inline-flex;
-   background-color: rgba(176, 171, 142, 0.6);
-   height: auto;
-   width: 100%;
-   box-shadow: rgba(0,0,0,0.2) 10px 10px 10px;
-     border-left: solid white 16px;
-     align-content: center;
-     text-justify: center;
-     margin-top: 30px;
+.contentor{
+    position: relative;
+
 }
 
-
-h2{
-   
-    text-transform: uppercase;
-   text-shadow: rgba(0,0,0,0.2) 10px 10px 10px;
-    display: inline-flex;
-    font-family: 'Raleway', sans-serif;
-     font-size: 18px;
-     margin: 30px auto 20px 20px;
-     color: white;
-     
-}
-@media (max-width: 900px){
-    .navbar{
-        visibility: hidden;
-    }
-.navbar2{
-    
-    visibility: visible;
-    position: fixed;
-    top: 0;
-    width: 100vw;
+.logo{
+    width: 30vw;
     height: auto;
-   background-color: rgba(176, 171, 142, 0.6);
-    color: white; 
-    padding: 2px;
-    margin:0;
+    margin: 80px 20px;
+}
+@media screen and (max-width: 720px){
+    .logo{
+        width: 80vw;
+        height: auto;
+        margin: 150px 20px;
+    }
+    h5{
+        font-family: 'Raleway', sans-serif;
+        color: white;
+        font-size: 18px;
+    }
+    /*NAVBAR*/
+}
+.navbar2{
+
+    visibility: visible;
+    display: inline-flex;
+    background-color: rgba(176, 171, 142, 0.6);
+    height: 10vh;
+    width: 49vw;
+    box-shadow: rgba(0,0,0,0.2) 10px 10px 10px;
+    margin-top: 100px;
+    margin-right: 0px;
+    border-left: white solid 16px;
+    text-align: center;
     align-content: center;
     align-items: center;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.navtext{
+
+    text-transform: uppercase;
+    text-shadow: rgba(0,0,0,0.2) 10px 10px 10px;
+    display: inline-flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    margin: auto 20px 0px 20px;
+    color: white;
+}
+.navbar3{
+    visibility: hidden;
+}
+.headerbottomimage{
+    position: absolute;
+    width: 40vw;
+    height: auto;
+    bottom: 0%;
+    vertical-align: bottom;
+
+}
+.headertitlebottom{
+    position: absolute;
+    vertical-align: text-bottom;
+    bottom:0%;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgba(189,189,189,0.5);
+    align-items: center;
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    width: 29vw;
     text-align: center;
-}
-h2{
-   
-    text-transform: uppercase;
-   text-shadow: rgba(0,0,0,0.2) 10px 10px 10px;
-    display: inline-flex;
-    font-family: 'Raleway', sans-serif;
-     font-size: 18px;
-     margin: 30px auto 30px 50px;
-     color: white;
-     
-}
+    margin:0;
 }
 
+/*NAVBAR MOBILE*/
+@media screen and (max-width: 900px){
+    .navbar2{
+        visibility: hidden;
+    }
 
-a{
-    text-decoration: none;
-}
+    .textmobile{
+        font-size: 16px;
+        margin:12px 12px 12px 12px;
+        color: white;
+        text-shadow: rgba(0,0,0,0.2) 10px 10px 10px;
+        font-family: 'Raleway', sans-serif;
+    }
 
-.headimage{
-    position: relative;
-    width: 69vw;
-    height: auto;
-    
-    
-}
-.dice{
-    position: absolute;
-    width: 36vw;
-    height: auto;
-    float: left;
-    align-content: left;
-    margin-top: 100px;
-}
+    .bottomrow{
+        padding: 0;
+        margin:0 auto -20px auto;
+    }
+    .headertitlebottom{
 
-.logo{
-    display: inline-flex;
-    margin: 80px 0px auto 80px;
-    width: 25%;
-    height: 25%;
+        bottom:0;
+        text-transform: uppercase;
+        color: white;
+        background-color: rgba(189,189,189,0.5);
+        align-items: center;
+        padding: 20px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 26px;
+        width: 100vw;
+        text-align: center;
+        margin: 0;
+    }
+    .mobilerow{
+        background-color: #928E83;
+    }
+    .headerbottomimage{
+        width: 100vw;
+        height: auto;
+    }
 }
-.headertitlebottom{
-    
-    display: flex;
-    text-transform: uppercase;
-    color: white;
-    background-color: rgba(189,189,189,0.5);
-    margin: 245px 0px 0px 850px;
-    padding: 20px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 26px;
-    width: 27%;
+.burger{
+    display: none;
 }
+.burger2{
+    display: none;
+}
+.burgerlogo{
+    display: none;
+}
+/*Hamburguer menu*/
+@media screen and (max-width: 700px){
+    .burger{
+        display: unset;
+        position: fixed;
+        top:0;
+        background-color: #928E83;
+        color: white;
+        width: 100vw;
+        height: auto;
+        z-index: 1000000000;
+        color: white;
+        margin: 0 auto auto -10px;
+    }
+    .burger2{
+        display: unset;
+        color:white;
+    }
 
-/* MOBILE */
-@media only screen and (min-width : 380px) and (max-width : 480px) {
-.header{
-    background-color: #928E83;
-   background-image: url("../img/second1.png");
-    width: auto;
-    height: auto;
-    margin: 0 auto;
-    padding: 0;
+    .burgerlogo{
+        display: unset;
+        width: 35vw;
+        height: auto;
+        margin:12px auto auto 8px ;
+    }
 }
-.navbar{
-    position: fixed;
-    bottom: 0px;
-   background-color: rgba(176, 171, 142, 0.6);
-   height: 50px;
-   width: 100%;
-   
-     align-content: center;
-     text-justify: center;
-}
-h2{
-   position: fixed;
-    bottom: 0px;
-    text-transform: uppercase;
-  
-    
-    font-family: 'Raleway', sans-serif;
-     font-size: 12px;
-   
-     color: white;
-     
-}
-a{
-    text-decoration: none;
-}
-
-.headimage{
-    position: relative;
-    width: 69%;
-    height: 69%;
-    
-    
-}
-.dice{
-    position: absolute;
-    width: 60%;
-    height: 60%;
-    float: left;
-    align-content: left;
-}
-
-.logo{
-    display: inline-flex;
-    margin: 80px 0px auto 80px;
-    width: 25%;
-    height: 25%;
-}
-.headertitlebottom{
-    position: static;
-    display: flex;
-    text-transform: uppercase;
-    color: white;
-    background-color: rgba(189,189,189,0.5);
-    margin: 265px 0 0 900px;
-    padding: 20px;
-    font-family: 'Raleway', sans-serif;
-    font-size: 26px;
-    width: 27%;
-}
-}
-
-
 /* DESCRIPTION */
 
 .descriptiontitle {
@@ -183,7 +173,7 @@ a{
     text-transform: uppercase;
     color: white;
     background-color: #C0BB95;
-    margin: auto 60px 60px 0;
+    margin: -25px 60px 60px 0;
     padding: 20px;
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
@@ -191,152 +181,190 @@ a{
 
 .description {
     background-color: #EBEBEB;
-     width: 100vw;
+    width: 100vw;
     height: auto;
     margin: 0 auto;
-    padding: 0;
+    padding: 20px;
     font-family: 'Lora', serif;
 }
 
 .houses{
-    
- display: flex;
- display: -webkit-flex;
- float:right;
+
+    display: flex;
+    display: -webkit-flex;
+    float:right;
     align-content: right;
-   margin: 8px 8px;
-    width: 100vw;
+    margin: 8px 20px;
+    width: 90vw;
     height: auto;
 }
 
 
 .descriptiontext{
-margin: 8px 8px;
- 
+    margin: 0 20px;
+
 }
 .descriptiontext1{
- margin: 8px 8px;
+    margin: 0 20px;
 }
 .titles{
     text-transform: uppercase;
     font-weight: bold;
     color: #969289;
     font-family: 'Raleway', sans-serif;
-    
+
 }
 
 
-p{
+.textbody{
     color: #969289;
     font-family: 'Raleway', sans-serif;
     font-size: 14px;
 }
-h1{
+.maintitle{
     color: #969289;
     font-family: 'Lora', serif;
     text-transform: uppercase;
     font-size: 30px;
 }
+
+
+
 /* MAPS */
 
 .location{
     background-color: #DFDDC6;
-     width: 100vw;
-    height:400px;
-    margin: 0 auto;
+    width: 100vw;
+    height:auto;
+    margin: 0;
     padding: 0;
 }
 
 .lokalita{
-   
-    width: 30%;
-    margin:80px 20px 20px 200px;
+    /*width: 50vw;*/
+    margin:40px 30px;
+}
+.graphics{
+    width: 50vw;
+    height: auto;
 }
 @media (max-width: 900px){
     .lokalita{
-   
-    width: 100vw;
+
+        width: 100vw;
     ;
-}
+    }
 }
 
 .graphics {
     align-self: center;
     width: 100%;
-    height: 100%; 
+    height: 100%;
 }
 
 /* TABLE */
-.h1color {
+#Přehledbytůacen h3 {
+    color:   rgb(139, 139, 136);
+    font-family: 'Lora', serif;
 
-  color:   rgb(139, 139, 136);
-  margin-left: 140px;
+
 }
-
-
-
 .thead-color {
 
     background-color: #888479;
     color: white;
-    font-size: 10px;
-}
+    font-size: 100%;
 
+}
 .thead-color tr{
- height: 5px;
+    height: 50px;
+
 }
-
-
 .table-image {
 
-    background-image: url("../img/table.jpg");
+    background-image: url("../img/table-background.jpg");
     background-size: 100%;
-  
-    
+
+
 }
-.thead1 {
+tbody {
 
     background-color: rgba(254, 251, 246, 0.9);
-    color: rgb(139, 139, 136);
-    
-  
-    
+
+    color: dimgray;
+    opacity: 0.4;
 }
 
-.thead2 {
 
-    background-color: rgba(253, 249, 238, 0.5);
-    color: rgb(139, 139, 136);
-    
-} 
-.thead3 {
+table{
 
-    background-color: rgba(254, 251, 246, 0.9);
-    color: rgb(139, 139, 136)
-}
-.thead4 {
-    background-color: rgba(253, 249, 238, 0.7);
-   color: rgb(139, 139, 136);
-}
-.table45 {
-
-    
-    border-bottom: solid black 0 300px;
-    
-  
+    justify-content: center;
+    text-align: center;
+    width:auto;
 }
 
-td a{
-    color: rgba(139, 139, 136);
+
+
+
+
+
+/*
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media
+only screen and (max-width: 1024px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr {
+        display: block;
+        justify-content: center;
+        float: left;
+
+    }
+    table {
+        background-image:  url("../img/1.jpg");
+        background-position: absolute;
+        background-size: 100%;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        justify-content: center;
+        float: left;
+    }
+
+    tr { border: 1px solid #ccc; }
+
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+
 
 }
-.table th, .table td1 {
-    border-top: none !important;
-}
+
 /*Galerie*/
-/*font*/
-/*font-family: 'Raleway', sans-serif;*/
-/*font-family: 'Lora', serif;*/
 #Galerie{
     background-color: rgb(157,154,144);
     height: 400px;
@@ -351,152 +379,360 @@ td a{
     font-family: 'Lora', serif;
     color:rgb(255,255,255);
 }
-.home-carousel {
-    margin-bottom: 0;
-    padding: 0 40px 30px 40px;
+
+/** Carousel **/
+.jcarousel-wrapper {
+    margin: 20px auto;
+    position: relative;
+    /*border: 5px solid #fff;*/
+    -webkit-box-shadow: 0 0 2px #999;
+    -moz-box-shadow: 0 0 2px #999;
+    box-shadow: 0 0 2px #999;
 }
-.home-carousel img{
-    width: 250px;
-    height: 170px;
-    -webkit-box-shadow: 5px 8px 6px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow:    5px 8px 6px 0px rgba(50, 50, 50, 0.75);
-    box-shadow:         5px 8px 6px 0px rgba(50, 50, 50, 0.75);
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
 }
+
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel li {
+    width: 200px;
+    height: 200px;
+    float: left;
+    border: 10px solid rgb(157,154,144);
+    /*-moz-box-sizing: border-box;*/
+    /*-webkit-box-sizing: border-box;*/
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+
+}
+
+.jcarousel img {
+    display: block;
+    max-width: 100%;
+}
+
+/** Carousel Controls **/
+
+/*.jcarousel-control-prev,*/
+/*.jcarousel-control-next {*/
+/*position: absolute;*/
+/*top: 50%;*/
+/*margin-top: -15px;*/
+/*width: 30px;*/
+/*height: 30px;*/
+/*text-align: center;*/
+/*background: #4E443C;*/
+/*color: #fff;*/
+/*text-decoration: none;*/
+/*text-shadow: 0 0 1px #000;*/
+/*font: 24px/27px Arial, sans-serif;*/
+/*-webkit-border-radius: 30px;*/
+/*-moz-border-radius: 30px;*/
+/*border-radius: 30px;*/
+/*-webkit-box-shadow: 0 0 4px #F0EFE7;*/
+/*-moz-box-shadow: 0 0 4px #F0EFE7;*/
+/*box-shadow: 0 0 4px #F0EFE7;*/
+/*}*/
+
+/*.jcarousel-control-prev {*/
+/*left: 15px;*/
+/*}*/
+
+/*.jcarousel-control-next {*/
+/*right: 15px;*/
+/*}*/
+
+
+/** Carousel Pagination **/
+.jcarousel-pagination {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    margin: 0;
+}
+
+.jcarousel-pagination a {
+    text-decoration: none;
+    display: inline-block;
+
+    font-size: 11px;
+    height: 10px;
+    width: 10px;
+    line-height: 10px;
+
+    background: #fff;
+    color: #4E443C;
+    border-radius: 10px;
+    text-indent: -9999px;
+
+    margin-right: 7px;
+
+
+    -webkit-box-shadow: 0 0 2px #4E443C;
+    -moz-box-shadow: 0 0 2px #4E443C;
+    box-shadow: 0 0 2px #4E443C;
+}
+
+.jcarousel-pagination a.active {
+    background: #4E443C;
+    color: #fff;
+    opacity: 1;
+
+    -webkit-box-shadow: 0 0 2px #F0EFE7;
+    -moz-box-shadow: 0 0 2px #F0EFE7;
+    box-shadow: 0 0 2px #F0EFE7;
+}
+
 .home-carousel-control {
     left: -12px;
-    height: 40px;
+    height: 0px;
     width: 40px;
-    background: none repeat scroll 0 0 #222222;
-    border: 3px solid #FFFFFF;
-    border-radius: 23px 23px 23px 23px;
-    margin-top: 75px;
+    margin-top: 95px;
 }
 
 .home-carousel-control.right {
     right: -12px;
 }
 
-/* The indicators */
-.home-carousel-indicators {
-    right: 50%;
-    top: auto;
-    bottom: -10px;
-    margin-right: -19px;
-}
 
-/* The colour of the indicators */
-.home-carousel-indicators li {
-    background: #cecece;
-}
+/*popup images of slider*/
 
-.home-carousel-indicators .active {
-    background: #222222;
+.mfp-no-margins img.mfp-img {
+    padding: 20px;
 }
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    bottom: 0;
 }
-
-/* Modal Content (image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-/* Caption of Modal Image */
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
-
-/* Add Animation */
-.modal-content, #caption {
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)}
-    to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
-}
-
-/* The Close Button */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+    padding: 0;
 }
 
 
+/*contact form*/
 #Kontakt{
+    height: 100%;
+    background-image:url('../img/cube2.png');
+    background-repeat:no-repeat;
+    background-position: 117% 20%;
     background-color: rgba(211,212,185,0.8);
 }
 
-.contact-cube{
-    float: right;
-}
-
-.form-company{
-    margin-top: 80px;
-}
-.Kontakt h3{
+#Kontakt h3, h4{
     font-family: 'Lora', serif;
     color:rgb(137,134,124);
 }
-#home-contact-form{
+
+#Kontakt h3{
+    margin-top: 80px;
+}
+
+.form-company{
+    margin-top: 20px;
+}
+
+.home-contact-form{
     border-radius: 2px;
 }
 
-.residence-info img{
-    width: 50%;
+.contact-button{
+    width: 100px;
+    float:right;
 }
 
-.company-list{
-    float:right;
-    border-left: solid 1px rgb(186,185,167);
-    margin-right: 213px;
-    margin-top: 50px;
+/*ajax form*/
+.loading, .success, .error{
+    height: 100%;
+    margin-top : 10px;
+    margin-bottom: 10px;
+    background-color: rgba(177, 195, 148, 0.5);
+    border: solid 2px rgb(177, 195, 148);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hide-contact-message{
+    display: none;
+}
+
+.contact-message{
+    color:rgb(137,134,124);
+    text-align: center;
+    width: 100%;
+}
+
+/*company info*/
+.residence-info{
+    position: absolute;
+    left: 175px;
+}
+.residence-info img{
+    width: 302.500px;
+}
+
+.company-lists{
+    height: 190px;
+    border-left: solid 2px rgb(186,185,167);
+    margin-top: 85px;
+    margin-left: 77.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.company-list-mobile{
+    display: none;
 }
 
 .company-list div{
+    font-size: 20px;
     font-family: 'Raleway', sans-serif;
+    font-weight: 300;
     color:rgb(137,134,124);
     padding: 5px 0px 5px 10px;
 }
+
+
+.button-to-top{
+    width: 80px;
+    height: 40px;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(137,134,124, 0.7);
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+@media screen and (min-width: 576px) {
+
+}
+
+/* xs < 768 */
+@media screen and (max-width:767px) {
+    .contact-init {
+        width: 80%;
+        margin: auto;
+    }
+
+    .loading, .success, .error{
+        width: 80%;
+        height: 100%;
+        margin: 10px auto;
+        background-color: rgba(177, 195, 148, 0.5);
+        border: solid 2px rgb(177, 195, 148);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact-message{
+        color:rgb(137,134,124);
+        text-align: center;
+        width: 100%;
+    }
+
+    /*.hide-contact-message{*/
+        /*display: none;*/
+    /*}*/
+
+    .residence-info{
+        width: 80%;
+        position: static;
+        left: 0px;
+        top: 0px;
+        margin: auto;
+    }
+
+    .company-logo{
+        width: 80%;
+        margin: auto;
+        padding-top:50px;
+    }
+
+    .residence-info img{
+        width: 100%;
+        margin: auto;
+    }
+
+    .company-lists{
+        width: 80%;
+        height: 90%;
+        border-left: none;
+        margin-top: 50px;
+        margin-left: 0px;
+        margin: auto;
+        padding-top:50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .company-list{
+        display: none;
+    }
+
+    .company-list-mobile{
+        display: unset;
+        width: 100%;
+    }
+
+
+    .company-list-mobile div{
+        font-size: 20px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        color:rgb(137,134,124);
+        padding: 10px 0px 10px 0px;
+        width: 100%;
+        text-align: center;
+    }
+
+
+}
+
+
+/* 767 < sm < 992 */
+@media screen and (min-width:768px) and (max-width:991px){
+    .contact-init{
+        width: 60%;
+        margin: auto;
+    }
+}
+
+/* 991 < md < 1200 */
+@media screen and (min-width:992px) and (max-width:1199px){
+
+}
+
+/* lg < 1200 */
+@media screen and (min-width:1200px){
+}
+
+

@@ -1,7 +1,6 @@
 /* HEADER */
 
-html,body
-{
+html,body {
     width: 100%;
     height: 100%;
     margin: 0px;
@@ -16,7 +15,6 @@ html,body
 }
 .contentor{
     position: relative;
-
 }
 
 .logo{
@@ -24,49 +22,7 @@ html,body
     height: auto;
     margin: 80px 20px;
 }
-@media screen and (max-width: 720px){
-    .logo{
-        width: 80vw;
-        height: auto;
-        margin: 150px 20px;
-    }
-    h5{
-        font-family: 'Raleway', sans-serif;
-        color: white;
-        font-size: 18px;
-    }
-    /*NAVBAR*/
-}
-.navbar2{
 
-    visibility: visible;
-    display: inline-flex;
-    background-color: rgba(176, 171, 142, 0.6);
-    height: 10vh;
-    width: 49vw;
-    box-shadow: rgba(0,0,0,0.2) 10px 10px 10px;
-    margin-top: 100px;
-    margin-right: 0px;
-    border-left: white solid 16px;
-    text-align: center;
-    align-content: center;
-    align-items: center;
-    border-radius: 6px;
-    overflow: hidden;
-}
-.navtext{
-
-    text-transform: uppercase;
-    text-shadow: rgba(0,0,0,0.2) 10px 10px 10px;
-    display: inline-flex;
-    font-family: 'Raleway', sans-serif;
-    font-size: 14px;
-    margin: auto 20px 0px 20px;
-    color: white;
-}
-.navbar3{
-    visibility: hidden;
-}
 .headerbottomimage{
     position: absolute;
     width: 40vw;
@@ -77,6 +33,7 @@ html,body
 }
 .headertitlebottom{
     position: absolute;
+    right: 0;
     vertical-align: text-bottom;
     bottom:0%;
     text-transform: uppercase;
@@ -91,27 +48,22 @@ html,body
     margin:0;
 }
 
-/*NAVBAR MOBILE*/
-@media screen and (max-width: 900px){
-    .navbar2{
-        visibility: hidden;
+@media screen and (max-width:991px){
+    .background{
+        background-size: auto 100% ;
+        background-repeat:no-repeat;
+        height: 100%;
     }
 
-    .textmobile{
-        font-size: 16px;
-        margin:12px 12px 12px 12px;
-        color: white;
-        text-shadow: rgba(0,0,0,0.2) 10px 10px 10px;
-        font-family: 'Raleway', sans-serif;
+    .headerbottomimage{
+        display: none;
     }
 
-    .bottomrow{
-        padding: 0;
-        margin:0 auto -20px auto;
-    }
     .headertitlebottom{
-
-        bottom:0;
+        position: absolute;
+        right: 0;
+        vertical-align: text-bottom;
+        bottom:0%;
         text-transform: uppercase;
         color: white;
         background-color: rgba(189,189,189,0.5);
@@ -119,17 +71,87 @@ html,body
         padding: 20px;
         font-family: 'Raleway', sans-serif;
         font-size: 26px;
-        width: 100vw;
+        width: 29vw;
         text-align: center;
-        margin: 0;
+        margin:0;
     }
-    .mobilerow{
-        background-color: #928E83;
+
+    .bottomrow{
+        padding: 0;
+        margin:0 auto -20px auto;
     }
-    .headerbottomimage{
-        width: 100vw;
+
+    .logo{
+        width: 30vw;
         height: auto;
+        margin: 10px 0px 0px 20px;
     }
+}
+@media screen and (max-width: 767px){
+    .background{
+        margin-top: 77px;
+    }
+    .logo{
+        /*width: 80vw;*/
+        /*height: auto;*/
+        /*margin: 150px 20px;*/
+        display: none;
+    }
+    h5{
+        font-family: 'Raleway', sans-serif;
+        color: white;
+        font-size: 18px;
+    }
+
+}
+
+/*NAVBAR*/
+
+.navbar2{
+    display: inline-flex;
+    background-color: rgba(176, 171, 142, 0.6);
+    height: 70px;
+    width: 100%;
+    box-shadow: rgba(0,0,0,0.2) 10px 10px 10px;
+    margin-top: 100px;
+    margin-right: 0px;
+    border-left: white solid 16px;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.navtext{
+    text-transform: uppercase;
+    text-shadow: rgba(0,0,0,0.2) 10px 10px 10px;
+    display: inline-flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    margin: auto 20px 0px 20px;
+    color: white;
+}
+
+/*NAVBAR MOBILE*/
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .navbar2{
+        /*display: inline-flex;*/
+        /*background-color: rgba(176, 171, 142, 0.6);*/
+        /*height: 10vh;*/
+        width: 100%;
+        height: 50px;
+        /*box-shadow: rgba(0,0,0,0.2) 10px 10px 10px;*/
+        margin-top: 160px;
+        /*margin-right: 0px;*/
+        /*border-left: white solid 16px;*/
+        /*text-align: center;*/
+        /*align-content: center;*/
+        /*align-items: center;*/
+        /*border-radius: 6px;*/
+        /*overflow: hidden;*/
+        top:0;
+    }
+
 }
 .burger{
     display: none;
@@ -141,7 +163,11 @@ html,body
     display: none;
 }
 /*Hamburguer menu*/
-@media screen and (max-width: 700px){
+@media screen and (max-width: 767px){
+    .navbar2{
+        display: none;
+    }
+
     .burger{
         display: unset;
         position: fixed;
@@ -167,7 +193,14 @@ html,body
     }
 }
 /* DESCRIPTION */
-
+#oprojektu {
+    background-color: #EBEBEB;
+    width: 100vw;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Lora', serif;
+}
 .descriptiontitle {
     display: inline-block;
     text-transform: uppercase;
@@ -179,22 +212,12 @@ html,body
     font-size: 18px;
 }
 
-.description {
-    background-color: #EBEBEB;
-    width: 100vw;
-    height: auto;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: 'Lora', serif;
-}
-
 .houses{
-
     display: flex;
     display: -webkit-flex;
     float:right;
     align-content: right;
-    margin: 8px 20px;
+    margin: 40px 20px 0px 20px;
     width: 90vw;
     height: auto;
 }
@@ -215,6 +238,11 @@ html,body
 
 }
 
+.maintitle{
+    color: #969289;
+    font-family: 'Lora', serif;
+    /*text-transform: uppercase;*/
+}
 
 .textbody{
     color: #969289;
@@ -222,12 +250,7 @@ html,body
     font-size: 14px;
     font-weight: 300;
 }
-.maintitle{
-    color: #969289;
-    font-family: 'Lora', serif;
-    text-transform: uppercase;
-    font-size: 30px;
-}
+
 
 /*Location and Map*/
 
@@ -567,7 +590,7 @@ only screen and (max-width: 1024px),
 
 /*contact form*/
 #Kontakt{
-    height: 100%;
+    height: auto;
     background-image:url('../img/cube2.png');
     background-repeat:no-repeat;
     background-position: 117% 20%;
@@ -579,13 +602,11 @@ only screen and (max-width: 1024px),
     color:rgb(137,134,124);
 }
 
-#Kontakt h3{
+.section-title-contact{
     margin-top: 80px;
+    margin-bottom: 20px;
 }
 
-.form-company{
-    margin-top: 20px;
-}
 
 .home-contact-form{
     border-radius: 2px;
@@ -598,7 +619,6 @@ only screen and (max-width: 1024px),
 
 /*ajax form*/
 .loading, .success, .error{
-    height: 100%;
     margin-top : 10px;
     margin-bottom: 10px;
     background-color: rgba(177, 195, 148, 0.5);
@@ -680,7 +700,6 @@ only screen and (max-width: 1024px),
 
     .loading, .success, .error{
         width: 80%;
-        height: 100%;
         margin: 10px auto;
         background-color: rgba(177, 195, 148, 0.5);
         border: solid 2px rgb(177, 195, 148);
@@ -695,9 +714,9 @@ only screen and (max-width: 1024px),
         width: 100%;
     }
 
-    /*.hide-contact-message{*/
-        /*display: none;*/
-    /*}*/
+    .hide-contact-message{
+        display: none;
+    }
 
     .residence-info{
         width: 80%;

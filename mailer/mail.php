@@ -86,12 +86,24 @@ if($honeypot == 'http://' && empty($humancheck)) {
 
     if(!empty($errors)){
         $messages[] = ['type' => 'error', 'text' => '<h4>The request was successful but your form is not filled out correctly.</h4>'];
-        foreach($errors as $error) 
+        foreach($errors as $error)
         {
             $messages[] = ['type' => 'error', 'text' => $error];
         }
         $result = 'fail';
     }else{
+        //send to user
+        if(!send_email($_POST['email'], 'customer-email.php' ,'[Rezidence Želanského] Thank you for contacting us!'))
+        {
+            $result = 'fail';
+        }
+
+        // send to admin
+        if(!send_email('tomomi.suda03@gmail.com', 'admin-email.php', '[Rezidence Želanského] Contact from a customer'))
+        {
+            $result = 'fail';
+        }
+
         if($result == 'fail') // one of the sending above did not succeed
         {
             $messages[] = ['type' => 'error', 'text' => 'Message was not sent'];

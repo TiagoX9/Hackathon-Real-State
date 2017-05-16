@@ -22,58 +22,50 @@
 
 <body>
 
-<div class="container-fluid contentor" id="home">
+<div class="container-fluid contentor  background" id="header">
     <div class="row">
-        <div class="col-xs-12 col-md-12 background">
-            <div class="row">
-                <div class="col-xs-12 col-md-5">
-                    <img class="img img-responsive logo" src="img/logo.png">
-                </div>
-                <div class="col-xs-12 col-md-7">
-                    <div class="navbar2">
-                        <a href="#oprojektu">
-                            <h5 class="navtext">O projektu</h5>
-                        </a>
-                        <a href="#Lokalita">
-                            <h5 class="navtext">Lokalita</h5>
-                        </a>
-                        <a href="#Přehledbytůacen">
-                            <h5 class="navtext">Přehled bytů a cen</h5>
-                        </a>
-                        <a href="#Galerie">
-                            <h5 class="navtext">Galerie</h5>
-                        </a>
-                        <a href="#Kontakt">
-                            <h5 class="navtext">Kontakt</h5>
-                        </a>
-                    </div>
-                </div>
+        <div class="col-xs-12 col-md-5">
+            <img class="img img-responsive logo" src="img/logo.png">
+        </div>
+        <div class="col-xs-12 col-md-7">
+            <div class="navbar2">
+                <a href="#oprojektu">
+                    <h5 class="navtext">O projektu</h5>
+                </a>
+                <a href="#Lokalita">
+                    <h5 class="navtext">Lokalita</h5>
+                </a>
+                <a href="#Přehledbytůacen">
+                    <h5 class="navtext">Přehled bytů a cen</h5>
+                </a>
+                <a href="#Galerie">
+                    <h5 class="navtext">Galerie</h5>
+                </a>
+                <a href="#Kontakt">
+                    <h5 class="navtext">Kontakt</h5>
+                </a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 col-xs-12 ">
-                <img class="headerbottomimage" src="img/dice.png" alt="dice">
-            </div>
-            <div class="col-md-6 col-xs-0">
-            </div>
-        </div>
-
-        <div class="bottomrow">
-            <h1 class="headertitlebottom">K nastěhování xx / 2018</h1>
-        </div>
-
     </div>
+    <div>
+        <img class="headerbottomimage" src="img/dice.png" alt="dice">
+    </div>
+
+    <div class="bottomrow">
+        <h1 class="headertitlebottom">K nastěhování xx / 2018</h1>
+    </div>
+
+
 </div>
 
 
 <!-- NAVBAR MOBILE -->
 <!-- MOBILE BAR -->
 <div class="burger">
-    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-        <div class="container">
-            <div class="burger navbar-header">
-                <img class="burgerlogo" src="img/logo.png">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+    <nav class="navbar navbar-inverse navbar-static-top burger-nav" role="navigation">
+            <div class="navbar-header">
+                <a href="#header"><img class="burgerlogo" src="img/logo.png"></a>
+                <button type="button" class="navbar-toggle collapsed burger-button" data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -83,16 +75,15 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+            <div class="collapse navbar-collapse buger-list-wrapper" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav buger-lists">
                     <li><a href="#oprojektu">O projektu</a></li>
                     <li><a href="#Lokalita">Lokalita</a></li>
                     <li><a href="#Přehledbytůacen">Přehled bytů a cen</a></li>
-                    <li><a href="#galerie">Galerie</a></li>
+                    <li><a href="#Galerie">Galerie</a></li>
                     <li><a href="#Kontakt">Kontakt</a></li>
                 </ul>
             </div>
-        </div>
     </nav>
 </div>
 
@@ -188,152 +179,716 @@
 
 <!--table-->
 <section id="Přehledbytůacen">
-    <div class="table-image">
-        <div class="container">
-            <div class="row">
-                <h3>PŘEHLED BITŮ A CENI</h3>
-                <div class="col-sm-12">
-                    <table class="table table-borderless table-condensed table-hover"
-                           class="table45 table table-responsive">
+    <div class="container">
+        <div class="row">
+            <h3>PŘEHLED BYTŮ A CENY</h3>
+            <div class="col-sm-12">
+                <table class="table table-condensed table-hover"
+                       class="table45 table table-responsive">
 
-                        <thead class="thead-color">
+                    <thead class="thead-color">
 
-                        <tr>
+                    <tr>
 
-                            <th>číslo bytu</th>
-                            <th>podlaží</th>
-                            <th>dipozice</th>
-                            <th>plocha bytu (m2)</th>
-                            <th>terasa (T)/předzahrádka(P)</th>
-                            <th>cena s DPH</th>
-                            <th>plánek (PDF)</th>
-                        </tr>
+                        <th>Číslo jednotky</th>
+                        <th>Podlaží</th>
+                        <th>Dipozice</th>
+                        <th>Orientace</th>
+                        <th>Obytná plocha</th>
+                        <th>Terasa / Balkon</th>
+                        <th>Před - zahrádka</th>
+                        <th>Sklep v ceně</th>
+                        <th>Cena s DPH</th>
+                        <th>Park. /Garáž. stání</th>
+                        <th>Plánek bytu (PDF)</th>
 
-                        </thead>
+                    </tr>
 
-                        <tbody>
+                    </thead>
 
-                        <tr>
-                            <td>Byt1.1</td>
-                            <td>1NP</td>
-                            <td>1+kk</td>
-                            <td>46.60</td>
-                            <td>12,20 (P)</td>
-                            <td>3,612,000</td>
-                            <td><a href="PDF/PDF - Byt 101.pdf" target="_blank">PDF</td>
-                        </tr>
+                    <tbody>
 
-                        <tr>
-                            <td>Byt1.2</td>
-                            <td>1NP</td>
-                            <td>1+kk</td>
-                            <td>46.60</td>
-                            <td>12.20(P)</td>
-                            <td>3,612,000</td>
-                            <td><a href="PDF/PDF - Byt 102.pdf" target="_blank">PDF</td>
+                    <tr class="room-12kk">
+                        <td>1</td>
+                        <td>1NP</td>
+                        <td>1(2)+kk</td>
+                        <td>JZ</td>
+                        <td>48,9</td>
+                        <td>16,7</td>
+                        <td>99,9</td>
+                        <td>ano</td>
+                        <td>3 985 450</td>
+                        <td>150 000</td>
+                        <td><a href="PDF/PDF - Byt 101.pdf" target="_blank">PDF</a></td>
+                    </tr>
 
-                        </tr>
-                        <tr>
-                            <td>Byt1.3</td>
-                            <td>1NP</td>
-                            <td>1+kk</td>
-                            <td>48.90</td>
-                            <td>116,65(P)</td>
-                            <td>4,185,400</td>
-                            <td><a href="PDF/PDF - Byt 103.pdf" target="_blank">PDF</td>
+                    <tr class="room-12kk">
+                        <td>2</td>
+                        <td>1NP</td>
+                        <td>1(2)+kk</td>
+                        <td>SZ</td>
+                        <td>46,6</td>
+                        <td>12,2</td>
+                        <td>-</td>
+                        <td>ano</td>
+                        <td>3 612 000</td>
+                        <td>150 000</td>
+                        <td><a href="PDF/PDF - Byt 102.pdf" target="_blank">PDF</a></td>
 
-                        </tr>
+                    </tr>
+                    <tr class="room-12kk">
+                        <td>3</td>
+                        <td>1NP</td>
+                        <td>1(2)+kk</td>
+                        <td>SV</td>
+                        <td>46,6</td>
+                        <td>12,2</td>
+                        <td>-</td>
+                        <td>ano</td>
+                        <td>3 612 000</td>
+                        <td>150 000</td>
+                        <td><a href="PDF/PDF - Byt 103.pdf" target="_blank">PDF</a></td>
 
-                        <tr>
-                            <td>Kancelář</td>
-                            <td>1NP</td>
-                            <td>1+kk</td>
-                            <td>48.90</td>
-                            <td>89,21(P)</td>
-                            <td>4,103,098</td>
-                            <td><a href="PDF/PDF - Byt 104.pdf" target="_blank">PDF</td>
+                    </tr>
 
-                        </tr>
+                    <tr class="room-12kk">
+                        <td>4</td>
+                        <td>1NP</td>
+                        <td>1(2)+kk</td>
+                        <td>JV</td>
+                        <td>48,9</td>
+                        <td>16,7</td>
+                        <td>72,5</td>
+                        <td>-</td>
+                        <td>3 913 050</td>
+                        <td>-</td>
+                        <td><a href="PDF/PDF - Byt 104.pdf" target="_blank">PDF</a></td>
 
-                        <tr>
-                            <td>Byt2.1</td>
-                            <td>2NP</td>
-                            <td>3+kk</td>
-                            <td>79.30</td>
-                            <td>-----------</td>
-                            <td>5,992,500</td>
-                            <td><a href="PDF/PDF - Byt 201.pdf" target="_blank">PDF</td>
+                    </tr>
 
-                        </tr>
+                    <tr class="room-1kk">
+                        <td>5</td>
+                        <td>2NP</td>
+                        <td>1+kk</td>
+                        <td>JZ</td>
+                        <td>30,2</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>ano</td>
+                        <td>2 299 460</td>
+                        <td>150 000</td>
+                        <td><a href="PDF/PDF - Byt 201.pdf" target="_blank">PDF</a></td>
 
-                        <tr>
-                            <td>Byt2.2</td>
-                            <td>2NP</td>
-                            <td>3+kk</td>
-                            <td>79.30</td>
-                            <td>-----------</td>
-                            <td>3,612.000</td>
-                            <td><a href="PDF/PDF - Byt 202.pdf" target="_blank">PDF</td>
+                    </tr>
 
-                        </tr>
-                        <tr>
-                            <td>Byt2.3</td>
-                            <td>2NP</td>
-                            <td>1+kk</td>
-                            <td>30.20</td>
-                            <td>-----------</td>
-                            <td>2,299,460</td>
-                            <td><a href="PDF/PDF - Byt 203.pdf" target="_blank">PDF</td>
+                    <tr class="room-3kk">
+                        <td>6</td>
+                        <td>2NP</td>
+                        <td>3+kk</td>
+                        <td>SZ</td>
+                        <td>79,3</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>ano</td>
+                        <td>5 992 500</td>
+                        <td>350 000</td>
+                        <td><a href="PDF/PDF - Byt 202.pdf" target="_blank">PDF</a></td>
+                    </tr>
 
-                        </tr>
-                        <tr>
-                            <td>Byt2.4</td>
-                            <td>2NP</td>
-                            <td>1+kk</td>
-                            <td>30.20</td>
-                            <td>-----------</td>
-                            <td>2,299,460</td>
-                            <td><a href="PDF/PDF - Byt 204.pdf" target="_blank">PDF</td>
+                    <tr class="room-3kk">
+                        <td>7</td>
+                        <td>2NP</td>
+                        <td>3+kk</td>
+                        <td>SV</td>
+                        <td>79,3</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>ano</td>
+                        <td>5 992 500</td>
+                        <td>350 000</td>
+                        <td><a href="PDF/PDF - Byt 203.pdf" target="_blank">PDF</a></td>
 
-                        </tr>
-                        <tr>
-                            <td>Byt3.1</td>
-                            <td>3NP</td>
-                            <td>4+kk</td>
-                            <td>124.50</td>
-                            <td>24.5(T)</td>
-                            <td>8,981,000</td>
-                            <td><a href="PDF/PDF - Byt 301.pdf" target="_blank">PDF</td>
+                    </tr>
+                    <tr class="room-1kk">
+                        <td>8</td>
+                        <td>2NP</td>
+                        <td>1+kk</td>
+                        <td>JV</td>
+                        <td>30,2</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>ano</td>
+                        <td>2 299 460</td>
+                        <td>-</td>
+                        <td><a href="PDF/PDF - Byt 204.pdf" target="_blank">PDF</a></td>
 
-                        </tr>
-                        <tr>
-                            <td>Byt3.2</td>
-                            <td>3NP</td>
-                            <td>4+kk</td>
-                            <td>124.50</td>
-                            <td>24.5(T)</td>
-                            <td>8,981,000</td>
-                            <td><a href="PDF/PDF - Byt 302.pdf" target="_blank">PDF</td>
+                    </tr>
+                    <tr class="room-3kk">
+                        <td>9</td>
+                        <td>3NP</td>
+                        <td>3+kk</td>
+                        <td>JV</td>
+                        <td>60,0</td>
+                        <td>8,2</td>
+                        <td>-</td>
+                        <td>ano</td>
+                        <td>4 750 000</td>
+                        <td>350 000</td>
+                        <td><a href="PDF/PDF - Byt 301.pdf" target="_blank">PDF</a></td>
 
-                        </tr>
-                        </tbody>
-                    </table>
+                    </tr>
+                    <tr class="room-3kk">
+                        <td>10</td>
+                        <td>3NP</td>
+                        <td>3+kk</td>
+                        <td>SV</td>
+                        <td>67,8</td>
+                        <td>16,3</td>
+                        <td>-</td>
+                        <td>ano</td>
+                        <td>5 368 500</td>
+                        <td>350 000</td>
+                        <td><a href="PDF/PDF - Byt 302.pdf" target="_blank">PDF</a></td>
+                    </tr>
 
-
-                </div>
+                    <tr class="room-4kk">
+                        <td>11</td>
+                        <td>3NP</td>
+                        <td>4+kk</td>
+                        <td>J,Z,S</td>
+                        <td>124,5</td>
+                        <td>24,5</td>
+                        <td>-</td>
+                        <td>ano</td>
+                        <td>8 981 000</td>
+                        <td>350 000</td>
+                        <td><a href="PDF/PDF - Byt 302.pdf" target="_blank">PDF</a></td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
 
+        <div class="btn-group-vertical room-group-mobile" role="group">
+            <div class="text-center table-floor-mobile">1.NP</div>
+            <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room1">
+                Byt 1 - 1(2)+kk<span
+                    class="caret"></span></button>
+
+            <div id="room1" class="collapse">
+                <div class="multi-column">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>Číslo jednotky</li>
+                                    <li>Podlaží</li>
+                                    <li>Dipozice</li>
+                                    <li>Orientace</li>
+                                    <li>Obytná plocha</li>
+                                    <li>Terasa / Balkon</li>
+                                    <li>Před - zahrádka</li>
+                                    <li>Sklep v ceně</li>
+                                    <li>Cena s DPH</li>
+                                    <li>Park. /Garáž. stání</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>1</li>
+                                    <li>1NP</li>
+                                    <li>1(2)+kk</li>
+                                    <li>JZ</li>
+                                    <li>48,9</li>
+                                    <li>16,7</li>
+                                    <li>99,9</li>
+                                    <li>ano</li>
+                                    <li>3 985 450</li>
+                                    <li>150 000</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <a class="btn btn-default text-center pdf-mobile" href="PDF/PDF - Byt 101.pdf"
+                               target="_blank">PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room2">
+                Byt 2 - 1(2)+kk<span
+                    class="caret"></span></button>
+
+            <div id="room2" class="collapse">
+                <div class="multi-column">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>Číslo jednotky</li>
+                                    <li>Podlaží</li>
+                                    <li>Dipozice</li>
+                                    <li>Orientace</li>
+                                    <li>Obytná plocha</li>
+                                    <li>Terasa / Balkon</li>
+                                    <li>Před - zahrádka</li>
+                                    <li>Sklep v ceně</li>
+                                    <li>Cena s DPH</li>
+                                    <li>Park. /Garáž. stání</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>2</li>
+                                    <li>1NP</li>
+                                    <li>1(2)+kk</li>
+                                    <li>SZ</li>
+                                    <li>46,6</li>
+                                    <li>12,2</li>
+                                    <li>-</li>
+                                    <li>ano</li>
+                                    <li>3 612 000</li>
+                                    <li>150 000</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <a class="btn btn-default text-center pdf-mobile" href="PDF/PDF - Byt 102.pdf"
+                               target="_blank">PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room3">
+                Byt 3 - 1(2)+kk<span
+                    class="caret"></span></button>
+
+            <div id="room3" class="collapse">
+                <div class="multi-column">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>Číslo jednotky</li>
+                                    <li>Podlaží</li>
+                                    <li>Dipozice</li>
+                                    <li>Orientace</li>
+                                    <li>Obytná plocha</li>
+                                    <li>Terasa / Balkon</li>
+                                    <li>Před - zahrádka</li>
+                                    <li>Sklep v ceně</li>
+                                    <li>Cena s DPH</li>
+                                    <li>Park. /Garáž. stání</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>3</li>
+                                    <li>1NP</li>
+                                    <li>1(2)+kk</li>
+                                    <li>SV</li>
+                                    <li>46,6</li>
+                                    <li>12,2</li>
+                                    <li>-</li>
+                                    <li>ano</li>
+                                    <li>3 612 000</li>
+                                    <li>150 000</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <a class="btn btn-default text-center pdf-mobile" href="PDF/PDF - Byt 103.pdf"
+                               target="_blank">PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room4">
+                Byt 4 - 1(2)+kk<span
+                    class="caret"></span></button>
+
+            <div id="room4" class="collapse">
+                <div class="multi-column">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>Číslo jednotky</li>
+                                    <li>Podlaží</li>
+                                    <li>Dipozice</li>
+                                    <li>Orientace</li>
+                                    <li>Obytná plocha</li>
+                                    <li>Terasa / Balkon</li>
+                                    <li>Před - zahrádka</li>
+                                    <li>Sklep v ceně</li>
+                                    <li>Cena s DPH</li>
+                                    <li>Park. /Garáž. stání</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>4</li>
+                                    <li>1NP</li>
+                                    <li>1(2)+kk</li>
+                                    <li>JV</li>
+                                    <li>48,9</li>
+                                    <li>16,7</li>
+                                    <li>72,5</li>
+                                    <li>-</li>
+                                    <li>3 913 050</li>
+                                    <li>-</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <a class="btn btn-default text-center pdf-mobile" href="PDF/PDF - Byt 104.pdf"
+                               target="_blank">PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center table-floor-mobile">2.NP</div>
+            <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room5">
+                Byt 5 - 1+kk<span
+                    class="caret"></span></button>
+
+            <div id="room5" class="collapse">
+                <div class="multi-column">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>Číslo jednotky</li>
+                                    <li>Podlaží</li>
+                                    <li>Dipozice</li>
+                                    <li>Orientace</li>
+                                    <li>Obytná plocha</li>
+                                    <li>Terasa / Balkon</li>
+                                    <li>Před - zahrádka</li>
+                                    <li>Sklep v ceně</li>
+                                    <li>Cena s DPH</li>
+                                    <li>Park. /Garáž. stání</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>5</li>
+                                    <li>2NP</li>
+                                    <li>1+kk</li>
+                                    <li>JZ</li>
+                                    <li>30,2</li>
+                                    <li>-</li>
+                                    <li>-</li>
+                                    <li>ano</li>
+                                    <li>2 299 460</li>
+                                    <li>150 000</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <a class="btn btn-default text-center pdf-mobile" href="PDF/PDF - Byt 201.pdf"
+                               target="_blank">PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room6">
+                Byt 6 - 3+kk<span
+                    class="caret"></span></button>
+
+            <div id="room6" class="collapse">
+                <div class="multi-column">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>Číslo jednotky</li>
+                                    <li>Podlaží</li>
+                                    <li>Dipozice</li>
+                                    <li>Orientace</li>
+                                    <li>Obytná plocha</li>
+                                    <li>Terasa / Balkon</li>
+                                    <li>Před - zahrádka</li>
+                                    <li>Sklep v ceně</li>
+                                    <li>Cena s DPH</li>
+                                    <li>Park. /Garáž. stání</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>6</li>
+                                    <li>2NP</li>
+                                    <li>3+kk</li>
+                                    <li>SZ</li>
+                                    <li>79,3</li>
+                                    <li>-</li>
+                                    <li>-</li>
+                                    <li>ano</li>
+                                    <li>5 992 500</li>
+                                    <li>350 000</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <a class="btn btn-default text-center pdf-mobile" href="PDF/PDF - Byt 202.pdf"
+                               target="_blank">PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room7">
+                Byt 7 - 3+kk<span
+                    class="caret"></span></button>
+
+            <div id="room7" class="collapse">
+                <div class="multi-column">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>Číslo jednotky</li>
+                                    <li>Podlaží</li>
+                                    <li>Dipozice</li>
+                                    <li>Orientace</li>
+                                    <li>Obytná plocha</li>
+                                    <li>Terasa / Balkon</li>
+                                    <li>Před - zahrádka</li>
+                                    <li>Sklep v ceně</li>
+                                    <li>Cena s DPH</li>
+                                    <li>Park. /Garáž. stání</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>7</li>
+                                    <li>2NP</li>
+                                    <li>3+kk</li>
+                                    <li>SV</li>
+                                    <li>79,3</li>
+                                    <li>-</li>
+                                    <li>-</li>
+                                    <li>ano</li>
+                                    <li>5 992 500</li>
+                                    <li>350 000</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <a class="btn btn-default text-center pdf-mobile" href="PDF/PDF - Byt 203.pdf"
+                               target="_blank">PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room8">
+                Byt 8 - 1+kk<span
+                    class="caret"></span></button>
+
+            <div id="room8" class="collapse">
+                <div class="multi-column">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>Číslo jednotky</li>
+                                    <li>Podlaží</li>
+                                    <li>Dipozice</li>
+                                    <li>Orientace</li>
+                                    <li>Obytná plocha</li>
+                                    <li>Terasa / Balkon</li>
+                                    <li>Před - zahrádka</li>
+                                    <li>Sklep v ceně</li>
+                                    <li>Cena s DPH</li>
+                                    <li>Park. /Garáž. stání</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>8</li>
+                                    <li>2NP</li>
+                                    <li>1+kk</li>
+                                    <li>JV</li>
+                                    <li>30,2</li>
+                                    <li>-</li>
+                                    <li>-</li>
+                                    <li>ano</li>
+                                    <li>2 299 460</li>
+                                    <li>-</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <a class="btn btn-default text-center pdf-mobile" href="PDF/PDF - Byt 204.pdf"
+                               target="_blank">PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center table-floor-mobile">3.NP</div>
+            <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room9">
+                Byt 9 - 3+kk<span
+                    class="caret"></span></button>
+
+            <div id="room9" class="collapse">
+                <div class="multi-column">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>Číslo jednotky</li>
+                                    <li>Podlaží</li>
+                                    <li>Dipozice</li>
+                                    <li>Orientace</li>
+                                    <li>Obytná plocha</li>
+                                    <li>Terasa / Balkon</li>
+                                    <li>Před - zahrádka</li>
+                                    <li>Sklep v ceně</li>
+                                    <li>Cena s DPH</li>
+                                    <li>Park. /Garáž. stání</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>9</li>
+                                    <li>3NP</li>
+                                    <li>3+kk</li>
+                                    <li>JV</li>
+                                    <li>60,0</li>
+                                    <li>8,2</li>
+                                    <li>-</li>
+                                    <li>ano</li>
+                                    <li>4 750 000</li>
+                                    <li>350 000</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <a class="btn btn-default text-center pdf-mobile" href="PDF/PDF - Byt 301.pdf"
+                               target="_blank">PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room10">
+                Byt 10 - 3+kk<span
+                    class="caret"></span></button>
+
+            <div id="room10" class="collapse">
+                <div class="multi-column">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>Číslo jednotky</li>
+                                    <li>Podlaží</li>
+                                    <li>Dipozice</li>
+                                    <li>Orientace</li>
+                                    <li>Obytná plocha</li>
+                                    <li>Terasa / Balkon</li>
+                                    <li>Před - zahrádka</li>
+                                    <li>Sklep v ceně</li>
+                                    <li>Cena s DPH</li>
+                                    <li>Park. /Garáž. stání</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>10</li>
+                                    <li>3NP</li>
+                                    <li>3+kk</li>
+                                    <li>SV</li>
+                                    <li>67,8</li>
+                                    <li>16,3</li>
+                                    <li>-</li>
+                                    <li>ano</li>
+                                    <li>5 368 500</li>
+                                    <li>350 000</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <a class="btn btn-default text-center pdf-mobile" <a href="PDF/PDF - Byt 302.pdf"
+                                                                                 target="_blank">PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room11">
+                Byt 11 - 4+kk<span
+                    class="caret"></span></button>
+
+            <div id="room11" class="collapse">
+                <div class="multi-column">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>Číslo jednotky</li>
+                                    <li>Podlaží</li>
+                                    <li>Dipozice</li>
+                                    <li>Orientace</li>
+                                    <li>Obytná plocha</li>
+                                    <li>Terasa / Balkon</li>
+                                    <li>Před - zahrádka</li>
+                                    <li>Sklep v ceně</li>
+                                    <li>Cena s DPH</li>
+                                    <li>Park. /Garáž. stání</li>
+                                </ul>
+                            </div>
+                            <div class="col-xs-6">
+                                <ul class="room-content-mobile">
+                                    <li>11</li>
+                                    <li>3NP</li>
+                                    <li>4+kk</li>
+                                    <li>J,Z,S</li>
+                                    <li>124,5</li>
+                                    <li>24,5</li>
+                                    <li>-</li>
+                                    <li>ano</li>
+                                    <li>8 981 000</li>
+                                    <li>350 000</li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <a class="btn btn-default text-center pdf-mobile" <a href="PDF/PDF - Byt 302.pdf"
+                                                                                 target="_blank">PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </div>
+
 </section>
 
 <!-- GALLERY -->
 <section id="Galerie">
     <div class="container">
-        <div class="row">
-            <h3>GALERIE</h3>
 
-            <div class="jcarousel-wrapper">
+        <div class="row">
+            <div class="col-xs-12 gallery-title">
+                <h3>GALERIE</h3>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="jcarousel-wrapper col-xs-12">
                 <div class="jcarousel">
                     <ul>
                         <li>
@@ -381,6 +936,7 @@
                 <p class="jcarousel-pagination"></p>
 
             </div>
+        </div>
 
             <div id="img-modal" class="white-popup-block mfp-hide">
                 <p><a class="popup-modal-dismiss" href="#">Dismiss</a></p>
@@ -504,18 +1060,21 @@
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/jquery.jcarousel.min.js"></script>
 
-
 <script>
     //navigation scroll//
-    $('a[href^="#"]').on('click', function (event) {
-        var target = $(this.getAttribute('href'));
-        if (target.length) {
-            event.preventDefault();
-            $('html, body').stop().animate({
-                scrollTop: target.offset().top
-            }, 1000);
-        }
+    $(function () {
+        $('a[href^="#"]').on('click', function (event) {
+            var target = $(this.getAttribute('href'));
+            if (target.length) {
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top
+                }, 1000);
+            }
+        });
     });
+
+
     //show and hide sticky button to top//
     $(window).scroll(function () {
         if ($(this).scrollTop() > 500) {
@@ -841,7 +1400,7 @@
                 $('#Kontakt .failed .contact-messages').empty(); // empty the messages always
             },
         }).done(function (data, status) {
-            if(data.result == 'success') {
+            if (data.result == 'success') {
                 $('#Kontakt .failed').hide();
 
                 $('.hide-contact-message.success').show();
@@ -849,18 +1408,18 @@
                 $('#Kontakt .failed').show(); // show the element for messages
                 var msgs_list = $('#Kontakt .failed .contact-messages'); // find the container for messages within
                 msgs_list.empty(); // empty the container for messages
-                $.each(data.messages, function(i, message) { // for each of the messages in the response
-                    msgs_list.append($('<div class="message message-'+message.type+'">'+message.text+'</div>'));
+                $.each(data.messages, function (i, message) { // for each of the messages in the response
+                    msgs_list.append($('<div class="message message-' + message.type + '">' + message.text + '</div>'));
                 });
             }
 
         }).fail(function () {
 
             $('.hide-contact-message.error').show();
-        }).always(function() {
+        }).always(function () {
             $('.loading').addClass("hide-contact-message");
         })
-    })
+    });
 
 
 </script>

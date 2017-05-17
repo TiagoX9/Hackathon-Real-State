@@ -42,7 +42,7 @@ function send_email($to_address, $template, $subject)
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
 
-    $mail->setFrom('tomomi.suda03@gmail.com', 'tomomi');//should change to admin mail address for info
+    $mail->setFrom('rezidencezalanskeho@famrem.com', 'Rezidence Zalanskeho');//should change to admin mail address for info
     $mail->addAddress($to_address);
     $mail->Subject = $subject;
     $mail->isHTML(true);
@@ -93,13 +93,13 @@ if($honeypot == 'http://' && empty($humancheck)) {
         $result = 'fail';
     }else{
         //send to user
-        if(!send_email($_POST['email'], 'customer-email.php' ,'[Rezidence Želanského] Thank you for contacting us!'))
+        if(!send_email($_POST['email'], 'customer-email.php' ,'[Rezidence Zalanskeho] Thank you for contacting us!'))
         {
             $result = 'fail';
         }
 
         // send to admin
-        if(!send_email('tomomi.suda03@gmail.com', 'admin-email.php', '[Rezidence Želanského] Contact from a customer'))
+        if(!send_email('j.vecerkova@yahoo.com', 'admin-email.php', '[Rezidence Zalanskeho] Contact from a customer'))
         {
             $result = 'fail';
         }

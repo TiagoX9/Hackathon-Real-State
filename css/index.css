@@ -144,6 +144,54 @@ html, body {
     color: white;
 }
 
+.burger {
+    display: none;
+    position: fixed;
+    top: 0;
+    background-color:rgba(137, 134, 124, 0.8);
+    color: white;
+    width: 100vw;
+    height: 70px;
+    z-index: 1000000000;
+    margin: 0 auto auto 0px;
+}
+
+.burgerlogo {
+    display: unset;
+    height: 60px;
+    margin: 10px auto auto 8px;
+}
+
+.burger-button{
+    margin-top: 20px;
+}
+
+.burger-nav{
+    background-color: transparent;
+    border:none;
+}
+.navbar-nav {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.buger-list-wrapper{
+    background-color:rgba(137, 134, 124, 0.5);
+    border: none;
+}
+
+/*overwrite default*/
+.navbar-inverse .navbar-nav>li>a{
+    color: #EBEBEB;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+
+.burger-mobile{
+    display: none;
+}
+
+
 /*NAVBAR MOBILE*/
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .navbar2 {
@@ -164,9 +212,6 @@ html, body {
 
 }
 
-.burger {
-    display: none;
-}
 
 /*Hamburguer menu*/
 @media screen and (max-width: 767px) {
@@ -174,7 +219,7 @@ html, body {
         display: none;
     }
 
-    .burger {
+    .burger-mobile {
         display: unset;
         position: fixed;
         top: 0;
@@ -185,30 +230,9 @@ html, body {
         z-index: 1000000000;
         margin: 0 auto auto 0px;
     }
-
-    .burgerlogo {
-        display: unset;
-        height: 60px;
-        margin: 10px auto auto 8px;
-    }
-
-    .burger-button{
-        margin-top: 20px;
-    }
-
-    .burger-nav{
-        background-color: transparent;
-        border:none;
-    }
-
-    .buger-list-wrapper{
-        background-color:rgba(137, 134, 124, 0.5);
-        border: none;
-    }
-
-    .buger-lists{
-        color: white;
-        font-family: 'Raleway', sans-serif;
+    .navbar-nav{
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -239,7 +263,7 @@ html, body {
     float: right;
     align-content: right;
     margin: 40px 20px 0px 20px;
-    width: 90vw;
+    width: 264px;
     height: auto;
 }
 
@@ -273,13 +297,32 @@ html, body {
     font-weight: 300;
 }
 
+@media screen and (max-width: 991px) {
+    .houses {
+        display: flex;
+        display: -webkit-flex;
+        float: none;
+        align-content: right;
+        margin: auto;
+        width: initial;
+        height: auto;
+    }
+
+    .descriptiontitle {
+        display: inline-block;
+        text-transform: uppercase;
+        color: white;
+        background-color: #C0BB95;
+        margin: -25px 60px 60px 0;
+        padding: 20px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 18px;
+    }
+
+}
 /*Location and Map*/
 
 #Lokalita {
-    background-image: url('../img/graphics.png');
-    background-size: 40%;
-    background-repeat: no-repeat;
-    background-position: 15% 100%;
     background-color: #DFDDC6;
 }
 
@@ -298,6 +341,10 @@ html, body {
     margin-top: 50px;
 }
 
+.location-img{
+    margin-top: 68px;
+}
+
 #mapkit-7239 {
     height: 400px;
     width: 100%;
@@ -305,11 +352,6 @@ html, body {
 }
 
 @media screen and (max-width: 991px) {
-    #Lokalita {
-        background-image: none;
-        background-color: #DFDDC6;
-    }
-
     .location-wapper {
         padding-top: 5px;
         padding-bottom: 20px;
@@ -318,11 +360,11 @@ html, body {
     .lokalita {
         padding-left: 0px;
         margin-top: 20px;
+        margin-bottom: 10px;
     }
 
-    .lokalita-contents {
-        width: 80%;
-        margin: auto;
+    .location-img{
+        display: none;
     }
 
     #mapkit-7239 {
@@ -334,6 +376,17 @@ html, body {
 @media screen and (max-width: 767px) {
     #mapkit-7239 {
         height: 250px;
+    }
+
+    #Lokalita h3 {
+        color: rgb(139, 139, 136);
+        font-family: 'Lora', serif;
+        margin-left: 20px;
+    }
+
+    .lokalita-contents p{
+    width: 90%;
+    margin: auto;
     }
 }
 
@@ -380,7 +433,6 @@ tbody {
 }
 
 .room-1kk {
-    background-color: rgba(254, 251, 246, 0.2);
 }
 
 room-12kk {
@@ -446,6 +498,7 @@ room-12kk {
         background-color: rgba(254, 251, 246, 0.5);
         border-top: 1px solid #DDDDDD;
         color: dimgray;
+        font-weight: 300;
     }
 
     .room-content-mobile {
@@ -457,6 +510,23 @@ room-12kk {
         background-color: #888479;
         opacity: 0.8;
         color: white;
+    }
+
+    .table-mobile-button11{
+        margin-bottom: 30px;
+    }
+
+    #room11{
+        margin-top: -30px;
+    }
+}
+@media screen and (max-width: 767px) {
+    #Přehledbytůacen h3 {
+        color: rgb(139, 139, 136);
+        font-family: 'Lora', serif;
+        margin-top: 80px;
+        margin-bottom: 40px;
+        margin-left: 20px;
     }
 }
 
@@ -471,20 +541,24 @@ room-12kk {
     align-items: center;
 }
 
-#Galerie > .container {
+#Galerie > .container-gallery {
     margin-right: 0;
     margin-left: 0;
-    width: 100%;
+    width: 90%;
 }
 
 .slide-show {
     margin-top: 20px;
 }
 
+
+.gallery-title-mobile{
+    display: none;
+}
+
 #Galerie h3 {
     font-family: 'Lora', serif;
     color: rgb(255, 255, 255);
-    margin-left:10px;
 }
 
 
@@ -572,12 +646,12 @@ room-12kk {
     -ms-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
     margin: 0;
+    height: 25px;
 }
 
 .jcarousel-pagination a {
     text-decoration: none;
     display: inline-block;
-
     font-size: 11px;
     height: 10px;
     width: 10px;
@@ -631,6 +705,27 @@ room-12kk {
 /* padding for main container */
 .mfp-no-margins .mfp-container {
     padding: 0;
+}
+
+@media screen and (max-width: 767px) {
+    #Galerie {
+        background-color: rgb(157, 154, 144);
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gallery-title{
+        display: none;
+    }
+
+    .gallery-title-mobile {
+        display: unset;
+        width: 100%;
+        margin-left: 40px;
+    }
 }
 
 /*contact form*/
@@ -702,10 +797,6 @@ room-12kk {
     justify-content: center;
 }
 
-.company-list-mobile {
-    display: none;
-}
-
 .company-list div {
     font-size: 20px;
     font-family: 'Raleway', sans-serif;
@@ -716,7 +807,9 @@ room-12kk {
 
 .button-to-top {
     width: 80px;
-    height: 40px;
+    /*height: 40px;*/
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-size: 20px;
     color: white;
     background-color: rgba(137, 134, 124, 0.7);
@@ -725,9 +818,7 @@ room-12kk {
     right: 2em;
     font-family: 'Raleway', sans-serif;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: none;
 
 }
 
@@ -737,6 +828,9 @@ room-12kk {
 
 /* xs < 768 */
 @media screen and (max-width: 767px) {
+    #Kontakt h3{
+        margin-left: 20px;
+    }
     .contact-init {
         width: 80%;
         margin: auto;
@@ -768,12 +862,13 @@ room-12kk {
         left: 0px;
         top: 0px;
         margin: auto;
+        height: 100%;
     }
 
     .company-logo {
-        width: 80%;
+        width: 60%;
         margin: auto;
-        padding-top: 50px;
+        padding-top: 0px;
     }
 
     .residence-info img {
@@ -788,15 +883,23 @@ room-12kk {
         margin-top: 50px;
         margin-left: 0px;
         margin: auto;
-        padding-top: 50px;
+        padding-top: 10px;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
     }
 
+    .company-list div {
+        font-size: 12px;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 200;
+        color: rgb(137, 134, 124);
+        padding: 5px 0px 5px 10px;
+    }
+
     .company-list {
-        display: none;
+        margin: auto;
     }
 
     .company-list-mobile {
@@ -806,9 +909,9 @@ room-12kk {
     }
 
     .company-list-mobile div {
-        font-size: 20px;
+        font-size: 12px;
         font-family: 'Raleway', sans-serif;
-        font-weight: 300;
+        font-weight: 200;
         color: rgb(137, 134, 124);
         padding: 10px 0px 10px 0px;
         width: 100%;
@@ -819,6 +922,18 @@ room-12kk {
 
 /* 767 < sm < 992 */
 @media screen and (min-width: 768px) and (max-width: 991px) {
+    #Kontakt{
+        height: 800px;
+    }
+    .company-lists {
+        height: 150px;
+        border-left: solid 2px rgb(186, 185, 167);
+        margin-top: 30px;
+        margin-left: 77.5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     .contact-init {
         width: 60%;
         margin: auto;

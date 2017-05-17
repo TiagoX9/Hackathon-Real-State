@@ -63,27 +63,53 @@
 <!-- MOBILE BAR -->
 <div class="burger">
     <nav class="navbar navbar-inverse navbar-static-top burger-nav" role="navigation">
-            <div class="navbar-header">
-                <a href="#header"><img class="burgerlogo" src="img/logo.png"></a>
-                <button type="button" class="navbar-toggle collapsed burger-button" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
+        <div class="navbar-header">
+            <a href="#header"><img class="burgerlogo" src="img/logo.png"></a>
+            <button type="button" class="navbar-toggle collapsed burger-button" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse buger-list-wrapper" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav buger-lists">
-                    <li><a href="#oprojektu">O projektu</a></li>
-                    <li><a href="#Lokalita">Lokalita</a></li>
-                    <li><a href="#Přehledbytůacen">Přehled bytů a cen</a></li>
-                    <li><a href="#Galerie">Galerie</a></li>
-                    <li><a href="#Kontakt">Kontakt</a></li>
-                </ul>
-            </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse buger-list-wrapper" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav buger-lists">
+                <li><a href="#oprojektu">O projektu</a></li>
+                <li><a href="#Lokalita">Lokalita</a></li>
+                <li><a href="#Přehledbytůacen">Přehled bytů a cen</a></li>
+                <li><a href="#Galerie">Galerie</a></li>
+                <li><a href="#Kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="burger-mobile">
+    <nav class="navbar navbar-inverse navbar-static-top burger-nav" role="navigation">
+        <div class="navbar-header">
+            <a href="#header"><img class="burgerlogo" src="img/logo.png"></a>
+            <button type="button" class="navbar-toggle collapsed burger-button" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse buger-list-wrapper" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav buger-lists">
+                <li><a href="#oprojektu">O projektu</a></li>
+                <li><a href="#Lokalita">Lokalita</a></li>
+                <li><a href="#Přehledbytůacen">Přehled bytů a cen</a></li>
+                <li><a href="#Galerie">Galerie</a></li>
+                <li><a href="#Kontakt">Kontakt</a></li>
+            </ul>
+        </div>
     </nav>
 </div>
 
@@ -92,12 +118,12 @@
 <section id="oprojektu">
     <div class="container description">
         <div class="row">
-            <h1 class="descriptiontitle"> Brožura ke stažení</h1>
+            <a href="PDF/PDF - Byt 101.pdf" target="_blank"><h1 class="descriptiontitle"> Brožura ke stažení</h1></a>
         </div>
         <div class="row">
-            <div class="col-xs-0 col-md-2">
+            <div class="col-xs-0 col-md-1">
             </div>
-            <div class="col-xs-12 col-md-3">
+            <div class="col-xs-12 col-md-4 house-wrapper">
                 <img class="img img-responsive houses" src="img/house1.png">
             </div>
             <div class=" descriptiontext col-xs-12 col-md-5">
@@ -113,9 +139,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-0 col-md-2">
+            <div class="col-xs-0 col-md-1">
             </div>
-            <div class="col-xs-12 col-md-3">
+            <div class="col-xs-12 col-md-4 house-wrapper">
                 <img class="img img-responsive houses" src="img/house1.png">
             </div>
             <div class="col-xs-12 col-md-5 descriptiontext1">
@@ -163,6 +189,8 @@
                         Občanská
                         vybavenost okolí (školky, pošta, nemocnice atd.) je nadstandardní.
                     </p>
+
+                    <img class="img-responsive location-img" src="img/graphics.png" alt="graphics">
                 </div>
 
             </div>
@@ -372,7 +400,7 @@
         <div class="btn-group-vertical room-group-mobile" role="group">
             <div class="text-center table-floor-mobile">1.NP</div>
             <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room1">
-                Byt 1 - 1(2)+kk<span
+                Byt 1 - 1(2)+kk &nbsp; <span
                     class="caret"></span></button>
 
             <div id="room1" class="collapse">
@@ -417,7 +445,7 @@
             </div>
 
             <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room2">
-                Byt 2 - 1(2)+kk<span
+                Byt 2 - 1(2)+kk &nbsp; <span
                     class="caret"></span></button>
 
             <div id="room2" class="collapse">
@@ -462,7 +490,7 @@
             </div>
 
             <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room3">
-                Byt 3 - 1(2)+kk<span
+                Byt 3 - 1(2)+kk &nbsp; <span
                     class="caret"></span></button>
 
             <div id="room3" class="collapse">
@@ -507,7 +535,7 @@
             </div>
 
             <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room4">
-                Byt 4 - 1(2)+kk<span
+                Byt 4 - 1(2)+kk &nbsp; <span
                     class="caret"></span></button>
 
             <div id="room4" class="collapse">
@@ -553,7 +581,7 @@
 
             <div class="text-center table-floor-mobile">2.NP</div>
             <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room5">
-                Byt 5 - 1+kk<span
+                Byt 5 - 1+kk &nbsp; <span
                     class="caret"></span></button>
 
             <div id="room5" class="collapse">
@@ -598,7 +626,7 @@
             </div>
 
             <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room6">
-                Byt 6 - 3+kk<span
+                Byt 6 - 3+kk &nbsp; <span
                     class="caret"></span></button>
 
             <div id="room6" class="collapse">
@@ -643,7 +671,7 @@
             </div>
 
             <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room7">
-                Byt 7 - 3+kk<span
+                Byt 7 - 3+kk &nbsp; <span
                     class="caret"></span></button>
 
             <div id="room7" class="collapse">
@@ -689,7 +717,7 @@
             </div>
 
             <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room8">
-                Byt 8 - 1+kk<span
+                Byt 8 - 1+kk &nbsp; <span
                     class="caret"></span></button>
 
             <div id="room8" class="collapse">
@@ -735,7 +763,7 @@
             </div>
             <div class="text-center table-floor-mobile">3.NP</div>
             <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room9">
-                Byt 9 - 3+kk<span
+                Byt 9 - 3+kk &nbsp; <span
                     class="caret"></span></button>
 
             <div id="room9" class="collapse">
@@ -780,7 +808,7 @@
             </div>
 
             <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room10">
-                Byt 10 - 3+kk<span
+                Byt 10 - 3+kk &nbsp; <span
                     class="caret"></span></button>
 
             <div id="room10" class="collapse">
@@ -825,8 +853,9 @@
                 </div>
             </div>
 
-            <button class="btn btn-default text-center table-room-mobile" data-toggle="collapse" data-target="#room11">
-                Byt 11 - 4+kk<span
+            <button class="btn btn-default text-center table-room-mobile table-mobile-button11" data-toggle="collapse"
+                    data-target="#room11">
+                Byt 11 - 4+kk &nbsp; <span
                     class="caret"></span></button>
 
             <div id="room11" class="collapse">
@@ -879,13 +908,21 @@
 
 <!-- GALLERY -->
 <section id="Galerie">
-    <div class="container">
 
+    <div class="container">
         <div class="row">
-            <div class="col-xs-12 gallery-title">
+            <div class="gallery-title">
                 <h3>GALERIE</h3>
             </div>
         </div>
+
+    </div>
+
+    <div class="gallery-title-mobile">
+        <h3>GALERIE</h3>
+    </div>
+
+    <div class="container-gallery">
 
         <div class="row">
             <div class="jcarousel-wrapper col-xs-12">
@@ -937,14 +974,12 @@
 
             </div>
         </div>
-
-            <div id="img-modal" class="white-popup-block mfp-hide">
-                <p><a class="popup-modal-dismiss" href="#">Dismiss</a></p>
-            </div>
-
-
-        </div>
     </div>
+
+    <div id="img-modal" class="white-popup-block mfp-hide">
+        <p><a class="popup-modal-dismiss" href="#">Dismiss</a></p>
+    </div>
+
 
 </section>
 <!-- Contact -->
@@ -1000,10 +1035,10 @@
                         </div>
                         <div class="form-group">
                                 <textarea class="form-control home-contact-form" name="your-message"
-                                          placeholder="vaše zpáva" rows="7" required></textarea>
+                                          placeholder="vaše zpráva" rows="7" required></textarea>
                         </div>
                         <div class="form-group">
-                            <input class="contact-button" type="submit" value="Contact">
+                            <input class="contact-button" type="submit" value="Odeslat">
                         </div>
 
                         <input type="hidden" name="honeypot" value="http://">
@@ -1028,14 +1063,14 @@
                         </div>
 
 
-                        <div class="company-list-mobile">
-                            <div>INVESTOR: <br>
-                                <strong>Color Cube s.r.o</strong></div>
-                            <div>VÝHRADNÍ PRODEJCE: <br>
-                                <strong>FAMREM s.r.o</strong></div>
-                            <div>ARCHITEKT: <br>
-                                <strong>A Praha s.r.o</strong></div>
-                        </div>
+                        <!--<div class="company-list-mobile">-->
+                        <!--<div>INVESTOR: <br>-->
+                        <!--<strong>Color Cube s.r.o</strong></div>-->
+                        <!--<div>VÝHRADNÍ PRODEJCE: <br>-->
+                        <!--<strong>FAMREM s.r.o</strong></div>-->
+                        <!--<div>ARCHITEKT: <br>-->
+                        <!--<strong>A Praha s.r.o</strong></div>-->
+                        <!--</div>-->
                     </div>
 
 
@@ -1075,8 +1110,18 @@
     });
 
 
+    //show and hide burger menu//
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 500) {
+                $('.burger').fadeIn(200);
+            } else {
+                $('.burger').fadeOut(200);
+            }
+        });
+
     //show and hide sticky button to top//
     $(window).scroll(function () {
+
         if ($(this).scrollTop() > 500) {
             $('.button-to-top').fadeIn(200);
         } else {
@@ -1403,8 +1448,12 @@
             if (data.result == 'success') {
                 $('#Kontakt .failed').hide();
 
+                $('#mailer-form').closest('.contact-init').hide();
+
                 $('.hide-contact-message.success').show();
             } else {
+                $('#mailer-form').closest('.contact-init').hide();
+
                 $('#Kontakt .failed').show(); // show the element for messages
                 var msgs_list = $('#Kontakt .failed .contact-messages'); // find the container for messages within
                 msgs_list.empty(); // empty the container for messages
@@ -1414,6 +1463,7 @@
             }
 
         }).fail(function () {
+            $('#mailer-form').closest('.contact-init').hide();
 
             $('.hide-contact-message.error').show();
         }).always(function () {

@@ -130,8 +130,11 @@ html, body {
     text-align: center;
     align-content: center;
     align-items: center;
-    border-radius: 6px;
     overflow: hidden;
+}
+
+.navbar2 a:hover{
+    text-decoration: none;
 }
 
 .navtext {
@@ -185,12 +188,12 @@ html, body {
     color: #EBEBEB;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
+    text-transform: uppercase;
 }
 
 .burger-mobile{
     display: none;
 }
-
 
 /*NAVBAR MOBILE*/
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -206,7 +209,6 @@ html, body {
         text-align: center;
         align-content: center;
         align-items: center;
-        border-radius: 6px;
         overflow: hidden;
     }
 
@@ -694,6 +696,7 @@ room-12kk {
 
 .mfp-no-margins img.mfp-img {
     padding: 20px;
+    width: 70%;
 }
 
 /* position of shadow behind the image */
@@ -704,7 +707,41 @@ room-12kk {
 
 /* padding for main container */
 .mfp-no-margins .mfp-container {
-    padding: 0;
+}
+
+.mfp-figure:after{
+    width: 70%;
+    margin: auto;
+}
+
+/*container size*/
+/*.mfp-bg {*/
+    /*top: 10%;*/
+    /*left: 10%;*/
+    /*width: 80%;*/
+    /*height: 80%;*/
+/*}*/
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+    opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container,
+.mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
 }
 
 @media screen and (max-width: 767px) {
@@ -726,11 +763,29 @@ room-12kk {
         width: 100%;
         margin-left: 40px;
     }
+
+    .mfp-no-margins img.mfp-img {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .mfp-figure:after{
+        width: 100%;
+        margin: auto;
+    }
+
+    /*container size*/
+    /*.mfp-bg {*/
+        /*top: 5%;*/
+        /*left: 5%;*/
+        /*width: 90%;*/
+        /*height: 90%;*/
+    /*}*/
 }
 
 /*contact form*/
 #Kontakt {
-    height: auto;
+    height: 620px;
     background-image: url('../img/cube2.png');
     background-repeat: no-repeat;
     background-position: 117% 20%;
@@ -828,6 +883,9 @@ room-12kk {
 
 /* xs < 768 */
 @media screen and (max-width: 767px) {
+    #Kontakt{
+        height: 730px;
+    }
     #Kontakt h3{
         margin-left: 20px;
     }
@@ -862,7 +920,6 @@ room-12kk {
         left: 0px;
         top: 0px;
         margin: auto;
-        height: 100%;
     }
 
     .company-logo {
@@ -877,8 +934,8 @@ room-12kk {
     }
 
     .company-lists {
-        width: 80%;
-        height: 40%;
+        height: 100px;
+        width: 100%;
         border-left: none;
         margin-top: 50px;
         margin-left: 0px;
@@ -923,7 +980,7 @@ room-12kk {
 /* 767 < sm < 992 */
 @media screen and (min-width: 768px) and (max-width: 991px) {
     #Kontakt{
-        height: 800px;
+        height: 900px;
     }
     .company-lists {
         height: 150px;

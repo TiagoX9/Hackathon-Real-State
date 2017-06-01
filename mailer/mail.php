@@ -1,5 +1,5 @@
 <?php
-
+header("Content-Type: text/html; charset=UTF-8");
 //error_reporting(E_ALL);
 //ini_set("display_errors", 1);
 
@@ -42,7 +42,7 @@ function send_email($to_address, $template, $subject)
     $mail->SMTPSecure = 'tls';
     $mail->Port = 587;
 
-    $mail->setFrom('rezidencezalanskeho@famrem.com', 'Rezidence Zalanskeho');//should change to admin mail address for info
+    $mail->setFrom('tomomi.suda03@gmail.com', 'Rezidence Zalanskeho');//should change to admin mail address for info
     $mail->addAddress($to_address);
     $mail->Subject = $subject;
     $mail->isHTML(true);
@@ -98,8 +98,8 @@ if($honeypot == 'http://' && empty($humancheck)) {
             $result = 'fail';
         }
 
-        // send to admin
-        if(!send_email('j.vecerkova@yahoo.com', 'admin-email.php', '[Rezidence Zalanskeho] Contact from a customer'))
+        // send to admin tomomi.suda03@gmail.com rezidencezalanskeho@famrem.com
+        if(!send_email('tomomi.suda03@gmail.com', 'admin-email.php', '[Rezidence Zalanskeho] Contact from a customer'))
         {
             $result = 'fail';
         }

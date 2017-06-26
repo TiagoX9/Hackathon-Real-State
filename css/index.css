@@ -10,7 +10,7 @@ html, body {
 .background {
     background-color: #928E83;
     background-image: url("../img/second1.png");
-    background-size: auto 100%;
+    background-size:  cover;
     background-repeat: no-repeat;
     width: 100vw;
     height: 520px;
